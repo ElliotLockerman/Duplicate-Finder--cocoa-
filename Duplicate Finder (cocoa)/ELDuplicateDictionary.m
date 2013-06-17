@@ -13,10 +13,15 @@
 @synthesize duplicateDictionary;
 
 
+
 -(void)generateDictionaryFromURL:(id)URL ignoringTheFiles:(id)arrayOfFilesToIgnore;
 {
     NSLog(@"Generating...");
-   
+    
+    NSMutableDictionary *duplicateDictionary = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *allFiles = [[NSMutableDictionary alloc] init];
+
+    
     NSFileManager *fileManager = [[NSFileManager alloc] init];
     NSDirectoryEnumerator *directoryEnumerator = [fileManager enumeratorAtURL:URL
                                                    includingPropertiesForKeys:[NSArray arrayWithObjects:NSURLNameKey,
@@ -25,7 +30,6 @@
                                                                  errorHandler:nil];
     
     
-    NSMutableDictionary *allFiles = [[NSMutableDictionary alloc] init];
 
     
     for (NSURL *currentURL in directoryEnumerator)
@@ -65,8 +69,8 @@
                     NSMutableString *bothURLs = [[NSMutableString alloc] init];
                     bothURLs = directoryOfCurrentFile;
                     [bothURLs appendFormat:@",%@", [allFiles objectForKey:currentFileBasename]];
-
-                    [duplicateDictionary setValue:bothURLs forKey:currentFileBasename];
+                    
+                    [duplicateDictionary setObject:bothURLs forKey:currentFileBasename];
                     NSLog(@"duplicateDictionary: %@", duplicateDictionary);
 
                 }
@@ -76,7 +80,8 @@
                     NSMutableString *newURL = [[NSMutableString alloc] init];
                     newURL = [duplicateDictionary objectForKey:currentFileBasename];
                     [newURL appendFormat:@",%@", directoryOfCurrentFile];
-                    [duplicateDictionary setValue:newURL forKey:currentFileBasename];
+                    
+                    [duplicateDictionary setObject:newURL forKey:currentFileBasename];
                     NSLog(@"duplicateDictionary: %@", duplicateDictionary);
 
                 }
