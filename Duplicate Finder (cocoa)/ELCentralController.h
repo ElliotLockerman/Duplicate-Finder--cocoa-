@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ELController : NSObject
+@interface ELCentralController : NSObject
+
+@property NSMutableString *path;
+@property NSMutableArray *arrayOfFilesToIgnore;
+
+- (IBAction)openExistingDocument:(id)sender;
+
+
+
 
 @end

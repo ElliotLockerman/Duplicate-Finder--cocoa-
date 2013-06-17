@@ -17,7 +17,8 @@
 		652C3DCA176E95F300C6B40D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652C3DAA176E95F300C6B40D /* Cocoa.framework */; };
 		652C3DD2176E95F300C6B40D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 652C3DD0176E95F300C6B40D /* InfoPlist.strings */; };
 		652C3DD5176E95F300C6B40D /* Duplicate_Finder__cocoa_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C3DD4176E95F300C6B40D /* Duplicate_Finder__cocoa_Tests.m */; };
-		652C3DE0176EA04700C6B40D /* DuplicateDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C3DDF176EA04700C6B40D /* DuplicateDictionary.m */; };
+		652C3DE0176EA04700C6B40D /* ELDuplicateDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C3DDF176EA04700C6B40D /* ELDuplicateDictionary.m */; };
+		652C3DE9176F461400C6B40D /* ELCentralController.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C3DE8176F461400C6B40D /* ELCentralController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +51,10 @@
 		652C3DD1176E95F300C6B40D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		652C3DD3176E95F300C6B40D /* Duplicate_Finder__cocoa_Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Duplicate_Finder__cocoa_Tests.h; sourceTree = "<group>"; };
 		652C3DD4176E95F300C6B40D /* Duplicate_Finder__cocoa_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Duplicate_Finder__cocoa_Tests.m; sourceTree = "<group>"; };
-		652C3DDE176EA04700C6B40D /* DuplicateDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DuplicateDictionary.h; sourceTree = "<group>"; };
-		652C3DDF176EA04700C6B40D /* DuplicateDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DuplicateDictionary.m; sourceTree = "<group>"; };
+		652C3DDE176EA04700C6B40D /* ELDuplicateDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELDuplicateDictionary.h; sourceTree = "<group>"; };
+		652C3DDF176EA04700C6B40D /* ELDuplicateDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELDuplicateDictionary.m; sourceTree = "<group>"; };
+		652C3DE7176F461400C6B40D /* ELCentralController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCentralController.h; sourceTree = "<group>"; };
+		652C3DE8176F461400C6B40D /* ELCentralController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCentralController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +123,10 @@
 				652C3DBC176E95F300C6B40D /* AppDelegate.h */,
 				652C3DBD176E95F300C6B40D /* AppDelegate.m */,
 				652C3DBF176E95F300C6B40D /* MainMenu.xib */,
-				652C3DDE176EA04700C6B40D /* DuplicateDictionary.h */,
-				652C3DDF176EA04700C6B40D /* DuplicateDictionary.m */,
+				652C3DE7176F461400C6B40D /* ELCentralController.h */,
+				652C3DE8176F461400C6B40D /* ELCentralController.m */,
+				652C3DDE176EA04700C6B40D /* ELDuplicateDictionary.h */,
+				652C3DDF176EA04700C6B40D /* ELDuplicateDictionary.m */,
 				652C3DB1176E95F300C6B40D /* Supporting Files */,
 			);
 			path = "Duplicate Finder (cocoa)";
@@ -268,7 +273,8 @@
 			files = (
 				652C3DB7176E95F300C6B40D /* main.m in Sources */,
 				652C3DBE176E95F300C6B40D /* AppDelegate.m in Sources */,
-				652C3DE0176EA04700C6B40D /* DuplicateDictionary.m in Sources */,
+				652C3DE0176EA04700C6B40D /* ELDuplicateDictionary.m in Sources */,
+				652C3DE9176F461400C6B40D /* ELCentralController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,14 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DuplicateDictionary : NSObject
+@interface ELDuplicateDictionary : NSObject
 
 @property NSDictionary *duplicateDictionary;
-@property NSString *pathOfFolderToSearch;
-@property NSIndexSet *filesToIgnore;
 
-- (IBAction)openExistingDocument:(id)sender;
 -(void) generateDictionary;
--(void) displayDictionary;
 
 @end
