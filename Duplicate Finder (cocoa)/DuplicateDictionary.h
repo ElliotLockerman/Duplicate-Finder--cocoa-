@@ -14,6 +14,7 @@
 @property NSOpenPanel *pathOfFolderToSearch;
 @property NSIndexSet *filesToIgnore;
 
+- (IBAction)openExistingDocument:(id)sender;
 -(void) generateDictionary;
 -(void) displayDictionary;
 
