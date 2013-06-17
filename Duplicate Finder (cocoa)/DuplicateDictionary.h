@@ -11,7 +11,7 @@
 @interface DuplicateDictionary : NSObject
 
 @property NSDictionary *duplicateDictionary;
-@property NSOpenPanel *pathOfFolderToSearch;
+@property NSString *pathOfFolderToSearch;
 @property NSIndexSet *filesToIgnore;
 
 - (IBAction)openExistingDocument:(id)sender;
