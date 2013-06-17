@@ -1306,7 +1306,7 @@
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<object class="NSView" key="NSWindowView" id="439893737">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">264</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="NSTextField" id="73127261">
@@ -1314,7 +1314,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{17, 199}, {110, 17}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="950649414"/>
 							<string key="NSReuseIdentifierKey">_NS:1535</string>
 							<bool key="NSEnabled">YES</bool>
@@ -1355,7 +1354,6 @@
 							<int key="NSvFlags">265</int>
 							<string key="NSFrame">{{677, 190}, {126, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="687493475"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
@@ -1380,7 +1378,6 @@
 							<int key="NSvFlags">266</int>
 							<string key="NSFrame">{{152, 196}, {513, 22}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="874952754"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
@@ -1415,7 +1412,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{17, 126}, {99, 17}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="815463237"/>
 							<string key="NSReuseIdentifierKey">_NS:1535</string>
 							<bool key="NSEnabled">YES</bool>
@@ -1436,8 +1432,6 @@
 							<int key="NSvFlags">265</int>
 							<string key="NSFrame">{{677, 42}, {126, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="643400237">
@@ -1465,7 +1459,6 @@
 							</set>
 							<string key="NSFrame">{{152, 123}, {517, 22}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="372709129"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
@@ -1488,8 +1481,6 @@
 						</object>
 					</array>
 					<string key="NSFrameSize">{817, 255}</string>
-					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="73127261"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
@@ -1502,10 +1493,10 @@
 			<object class="NSCustomObject" id="755631768">
 				<string key="NSClassName">NSFontManager</string>
 			</object>
-			<object class="NSCustomObject" id="194400966">
+			<object class="NSCustomObject" id="994225334">
 				<string key="NSClassName">ELCentralController</string>
 			</object>
-			<object class="NSUserDefaultsController" id="209775626">
+			<object class="NSUserDefaultsController" id="740036507">
 				<bool key="NSSharedInstance">YES</bool>
 			</object>
 		</array>
@@ -2193,15 +2184,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: path</string>
+						<string key="label">value: selectedURL</string>
 						<reference key="source" ref="950649414"/>
-						<reference key="destination" ref="194400966"/>
+						<reference key="destination" ref="994225334"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="950649414"/>
-							<reference key="NSDestination" ref="194400966"/>
-							<string key="NSLabel">value: path</string>
+							<reference key="NSDestination" ref="994225334"/>
+							<string key="NSLabel">value: selectedURL</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">path</string>
+							<string key="NSKeyPath">selectedURL</string>
 							<object class="NSDictionary" key="NSOptions">
 								<string key="NS.key.0">NSContinuouslyUpdatesValue</string>
 								<boolean value="YES" key="NS.object.0"/>
@@ -2213,15 +2204,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: path</string>
+						<string key="label">value: selectedURL</string>
 						<reference key="source" ref="64359555"/>
-						<reference key="destination" ref="194400966"/>
+						<reference key="destination" ref="994225334"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="64359555"/>
-							<reference key="NSDestination" ref="194400966"/>
-							<string key="NSLabel">value: path</string>
+							<reference key="NSDestination" ref="994225334"/>
+							<string key="NSLabel">value: selectedURL</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">path</string>
+							<string key="NSKeyPath">selectedURL</string>
 							<object class="NSDictionary" key="NSOptions">
 								<string key="NS.key.0">NSContinuouslyUpdatesValue</string>
 								<boolean value="YES" key="NS.object.0"/>
@@ -2235,10 +2226,10 @@
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: arrayOfFilesToIgnore</string>
 						<reference key="source" ref="815463237"/>
-						<reference key="destination" ref="194400966"/>
+						<reference key="destination" ref="994225334"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="815463237"/>
-							<reference key="NSDestination" ref="194400966"/>
+							<reference key="NSDestination" ref="994225334"/>
 							<string key="NSLabel">value: arrayOfFilesToIgnore</string>
 							<string key="NSBinding">value</string>
 							<string key="NSKeyPath">arrayOfFilesToIgnore</string>
@@ -2250,18 +2241,18 @@
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">openExistingDocument:</string>
-						<reference key="source" ref="194400966"/>
+						<reference key="source" ref="994225334"/>
 						<reference key="destination" ref="874952754"/>
 					</object>
 					<int key="connectionID">670</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">test:</string>
-						<reference key="source" ref="194400966"/>
+						<string key="label">searchForDuplicates:</string>
+						<reference key="source" ref="994225334"/>
 						<reference key="destination" ref="372709129"/>
 					</object>
-					<int key="connectionID">683</int>
+					<int key="connectionID">695</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3350,12 +3341,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">657</int>
-						<reference key="object" ref="209775626"/>
+						<reference key="object" ref="740036507"/>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">669</int>
-						<reference key="object" ref="194400966"/>
+						<reference key="object" ref="994225334"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</array>
@@ -3535,7 +3526,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">694</int>
+			<int key="maxID">695</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3552,15 +3543,15 @@
 					<string key="superclassName">NSObject</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="openExistingDocument:">id</string>
-						<string key="test:">id</string>
+						<string key="searchForDuplicates:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="openExistingDocument:">
 							<string key="name">openExistingDocument:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="test:">
-							<string key="name">test:</string>
+						<object class="IBActionInfo" key="searchForDuplicates:">
+							<string key="name">searchForDuplicates:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>

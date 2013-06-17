@@ -7,12 +7,16 @@
 //
 
 #import "ELCentralController.h"
+#import "ELDuplicateDictionary.h"
 
 @implementation ELCentralController
 
-@synthesize path;
+
+@synthesize selectedURL;
 @synthesize arrayOfFilesToIgnore;
 
+
+// For the "Select Folder" button. 
 - (IBAction)openExistingDocument:(id)sender
 {
         
@@ -31,8 +35,8 @@
     {
         if (result == NSFileHandlingPanelOKButton)
         {
-            self.path = [[panel URLs] objectAtIndex:0];
-            NSLog(@"The path is: %@", self.path);
+            self.selectedURL = [[panel URLs] objectAtIndex:0];
+            NSLog(@"The path is: %@", self.selectedURL);
         }
         
     }];
@@ -40,5 +44,14 @@
     
 }
 
+
+// For clicking the "Search" button.
+-(IBAction)searchForDuplicates:(id)sender
+{
+    
+    ELDuplicateDictionary *currentDuplicates = [[ELDuplicateDictionary alloc] init];
+    [currentDuplicates generateDictionaryFromURL:(id)self.selectedURL
+                                ignoringTheFiles:(id)self.arrayOfFilesToIgnore];
+}
 
 @end

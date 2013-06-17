@@ -10,10 +10,11 @@
 
 @interface ELCentralController : NSObject
 
-@property NSMutableString *path;
+@property NSMutableString *selectedURL;
 @property NSMutableArray *arrayOfFilesToIgnore;
 
 - (IBAction)openExistingDocument:(id)sender;
+- (IBAction)searchForDuplicates:(id)sender;
 
 
 
