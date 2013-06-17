@@ -48,7 +48,6 @@
 // For clicking the "Search" button.
 -(IBAction)searchForDuplicates:(id)sender
 {
-    
     ELDuplicateDictionary *currentDuplicates = [[ELDuplicateDictionary alloc] init];
     [currentDuplicates generateDictionaryFromURL:(id)self.selectedURL
                                 ignoringTheFiles:(id)self.arrayOfFilesToIgnore];

@@ -20,7 +20,7 @@
     
     NSMutableDictionary *duplicateDictionary = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *allFiles = [[NSMutableDictionary alloc] init];
-
+    
     
     NSFileManager *fileManager = [[NSFileManager alloc] init];
     NSDirectoryEnumerator *directoryEnumerator = [fileManager enumeratorAtURL:URL
@@ -28,7 +28,6 @@
                                                                               NSURLIsDirectoryKey,nil]
                                                                       options:NSDirectoryEnumerationSkipsHiddenFiles
                                                                  errorHandler:nil];
-    
     
 
     
@@ -56,7 +55,11 @@
             NSLog(@"directoryOfCurrentFile: %@", directoryOfCurrentFile);
             
             // Add to dictionary
-            if ([allFiles objectForKey:currentFileBasename] == nil) // If its not a duplicate (at this point)
+            if([arrayOfFilesToIgnore containsObject:currentFileBasename])
+            {
+            //Do nothing
+            }
+            else if([allFiles objectForKey:currentFileBasename] == nil) // If its not a duplicate (at this point)
             {
                 [allFiles setObject:directoryOfCurrentFile forKey:currentFileBasename];
                 NSLog(@"allFiles: %@", allFiles);
