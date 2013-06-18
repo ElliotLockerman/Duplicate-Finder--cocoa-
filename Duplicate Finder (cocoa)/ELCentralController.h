@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ELDuplicateDictionary.h"
+#import "ELDuplicateFiles.h"
 
 @interface ELCentralController : NSObject
 
 @property NSMutableString *selectedURL;
 @property NSMutableArray *arrayOfFilesToIgnore;
 @property (strong) NSWindowController *windowController;
-@property (strong) ELDuplicateDictionary *duplicateDictionary;
+@property (strong) ELDuplicateFiles *duplicateDictionary;
 
 - (IBAction)openExistingDocument:(id)sender;
 - (IBAction)searchForDuplicates:(id)sender;

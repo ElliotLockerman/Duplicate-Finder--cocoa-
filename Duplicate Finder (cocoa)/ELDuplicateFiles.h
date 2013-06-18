@@ -1,5 +1,5 @@
 //
-//  duplicateDictionary.h
+//  ELDuplicateFiles.m
 //  Duplicate Finder (cocoa)
 //
 //  Created by E L on 6/16/13.
@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ELDuplicateDictionary : NSObject
+@interface ELDuplicateFiles : NSObject
 
-@property (readonly,strong) NSMutableDictionary *duplicateDictionary;
-@property (readonly,strong) NSArray *duplicateFilesArray;
+@property (readonly,strong) NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;
+@property (readonly,strong) NSArray *arrrayOfDuplicateFiles;
 
 -(void)generateDictionaryFromURL:(id)URL ignoringTheFiles:(id)arrayOfFilesToIgnore;
 

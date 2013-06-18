@@ -8,7 +8,7 @@
 
 #import "ELLeftTableController.h"
 #import "ELCentralController.h"
-#import "ELDuplicateDictionary.h"
+#import "ELDuplicateFiles.h"
 
 @implementation ELLeftTableController
 

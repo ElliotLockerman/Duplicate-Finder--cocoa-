@@ -11,14 +11,13 @@
 
 
 #import "ELCentralController.h"
-#import "ELDuplicateDictionary.h"
+#import "ELDuplicateFiles.h"
 
 @implementation ELCentralController
 
 
 @synthesize selectedURL;
 @synthesize arrayOfFilesToIgnore;
-@synthesize duplicateDictionary;
 @synthesize windowController;
 
 // For the "Select Folder" button. 
@@ -53,7 +52,7 @@
 -(IBAction)searchForDuplicates:(id)sender
 {
     // Make and call the dictionary object
-    ELDuplicateDictionary *duplicateDictionary = [[ELDuplicateDictionary alloc] init];
+    ELDuplicateFiles *duplicateDictionary = [[ELDuplicateFiles alloc] init];
     [duplicateDictionary generateDictionaryFromURL:(id)self.selectedURL
                                   ignoringTheFiles:(id)self.arrayOfFilesToIgnore];
     
