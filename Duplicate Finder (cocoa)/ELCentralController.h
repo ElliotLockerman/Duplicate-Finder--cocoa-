@@ -12,11 +12,15 @@
 
 @property NSMutableString *selectedURL;
 @property NSMutableArray *arrayOfFilesToIgnore;
+@property NSMutableDictionary *duplicateDictionary;
+@property(strong) NSWindowController *windowController;
+@property NSArray *duplicateFilesArray;
 
 - (IBAction)openExistingDocument:(id)sender;
 - (IBAction)searchForDuplicates:(id)sender;
 
-
+-(int)numberOfRowsInTableView:(NSTableView *)tabelView;
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row;
 
 
 @end

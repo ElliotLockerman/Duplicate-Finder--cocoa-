@@ -20,6 +20,7 @@
 		652C3DE0176EA04700C6B40D /* ELDuplicateDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C3DDF176EA04700C6B40D /* ELDuplicateDictionary.m */; };
 		652C3DE9176F461400C6B40D /* ELCentralController.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C3DE8176F461400C6B40D /* ELCentralController.m */; };
 		652C3E11176F7F4800C6B40D /* logo.icns in Resources */ = {isa = PBXBuildFile; fileRef = 652C3E10176F7F4800C6B40D /* logo.icns */; };
+		652C3E64176FEF3700C6B40D /* duplicatesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C3E63176FEF3700C6B40D /* duplicatesWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		652C3DE7176F461400C6B40D /* ELCentralController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCentralController.h; sourceTree = "<group>"; };
 		652C3DE8176F461400C6B40D /* ELCentralController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCentralController.m; sourceTree = "<group>"; };
 		652C3E10176F7F4800C6B40D /* logo.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = logo.icns; sourceTree = "<group>"; };
+		652C3E63176FEF3700C6B40D /* duplicatesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = duplicatesWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				652C3DBC176E95F300C6B40D /* AppDelegate.h */,
 				652C3DBD176E95F300C6B40D /* AppDelegate.m */,
 				652C3DBF176E95F300C6B40D /* MainMenu.xib */,
+				652C3E63176FEF3700C6B40D /* duplicatesWindow.xib */,
 				652C3DE7176F461400C6B40D /* ELCentralController.h */,
 				652C3DE8176F461400C6B40D /* ELCentralController.m */,
 				652C3DDE176EA04700C6B40D /* ELDuplicateDictionary.h */,
@@ -241,6 +244,7 @@
 				652C3DBB176E95F300C6B40D /* Credits.rtf in Resources */,
 				652C3DC1176E95F300C6B40D /* MainMenu.xib in Resources */,
 				652C3E11176F7F4800C6B40D /* logo.icns in Resources */,
+				652C3E64176FEF3700C6B40D /* duplicatesWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

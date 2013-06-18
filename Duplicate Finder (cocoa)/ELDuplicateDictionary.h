@@ -11,7 +11,7 @@
 @interface ELDuplicateDictionary : NSObject
 
 @property NSMutableDictionary *duplicateDictionary;
-
+@property NSArray *duplicateFilesArray;
 
 -(void)generateDictionaryFromURL:(id)URL ignoringTheFiles:(id)arrayOfFilesToIgnore;
 

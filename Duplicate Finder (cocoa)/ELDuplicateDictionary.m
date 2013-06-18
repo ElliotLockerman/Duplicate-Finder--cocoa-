@@ -11,7 +11,7 @@
 @implementation ELDuplicateDictionary
 
 @synthesize duplicateDictionary;
-
+@synthesize duplicateFilesArray;
 
 
 -(void)generateDictionaryFromURL:(id)URL ignoringTheFiles:(id)arrayOfFilesToIgnore;
@@ -20,7 +20,8 @@
     
     NSMutableDictionary *duplicateDictionary = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *allFiles = [[NSMutableDictionary alloc] init];
-    
+    NSArray *duplicateFilesArray = [[NSArray alloc] init];
+
     
     NSFileManager *fileManager = [[NSFileManager alloc] init];
     NSDirectoryEnumerator *directoryEnumerator = [fileManager enumeratorAtURL:URL
@@ -91,6 +92,7 @@
                 
             }
         }
+        duplicateFilesArray = [duplicateDictionary allKeys];
     
         
         
