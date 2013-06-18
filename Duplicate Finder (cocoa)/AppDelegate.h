@@ -7,9 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ELCentralController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 //@property (assign) IBOutlet NSWindow *window;
+@property ELCentralController *centralController; 
 
 @end

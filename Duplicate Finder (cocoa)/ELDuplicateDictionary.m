@@ -10,15 +10,18 @@
 
 @implementation ELDuplicateDictionary
 
-@synthesize duplicateDictionary;
-@synthesize duplicateFilesArray;
+NSMutableDictionary *_dictionaryofDuplicates;
+NSMutableArray *_duplicateFilesArray;
+
+@synthesize duplicateDictionary = _dictionaryOfDuplicates;
+@synthesize duplicateFilesArray = _duplicateFilesArray;
 
 
 -(void)generateDictionaryFromURL:(id)URL ignoringTheFiles:(id)arrayOfFilesToIgnore;
 {
     NSLog(@"Generating...");
     
-    NSMutableDictionary *duplicateDictionary = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *_dictionaryOfDuplicates = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *allFiles = [[NSMutableDictionary alloc] init];
     NSArray *duplicateFilesArray = [[NSArray alloc] init];
 
@@ -67,38 +70,38 @@
             }
             else //If its a duplicate
             {
-                if ([duplicateDictionary objectForKey:currentFileBasename] == nil) // If its not already in the duplicate dictionary
+                if ([_dictionaryOfDuplicates objectForKey:currentFileBasename] == nil) // If its not already in the duplicate dictionary
                 {
                     // Add the key and BOTH paths
                     NSMutableString *bothURLs = [[NSMutableString alloc] init];
                     bothURLs = directoryOfCurrentFile;
                     [bothURLs appendFormat:@",%@", [allFiles objectForKey:currentFileBasename]];
                     
-                    [duplicateDictionary setObject:bothURLs forKey:currentFileBasename];
-                    NSLog(@"duplicateDictionary: %@", duplicateDictionary);
+                    [_dictionaryOfDuplicates setObject:bothURLs forKey:currentFileBasename];
+                    NSLog(@"duplicateDictionary: %@", _dictionaryOfDuplicates);
 
                 }
                 else // If its already in the duplciate dictionary
                 {
                     //Concatenate current URL to object
                     NSMutableString *newURL = [[NSMutableString alloc] init];
-                    newURL = [duplicateDictionary objectForKey:currentFileBasename];
+                    newURL = [_dictionaryOfDuplicates objectForKey:currentFileBasename];
                     [newURL appendFormat:@",%@", directoryOfCurrentFile];
                     
-                    [duplicateDictionary setObject:newURL forKey:currentFileBasename];
-                    NSLog(@"duplicateDictionary: %@", duplicateDictionary);
+                    [_dictionaryOfDuplicates setObject:newURL forKey:currentFileBasename];
+                    NSLog(@"duplicateDictionary: %@", _dictionaryOfDuplicates);
 
                 }
                 
             }
         }
-        duplicateFilesArray = [duplicateDictionary allKeys];
+        duplicateFilesArray = [_dictionaryOfDuplicates allKeys];
     
         
         
     }
     
-    NSLog(@"------------------------------\n duplicateDictionary: %@", duplicateDictionary);
+    NSLog(@"------------------------------\n duplicateDictionary: %@", _dictionaryOfDuplicates);
     
     
 }
