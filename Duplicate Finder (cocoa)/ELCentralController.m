@@ -18,6 +18,7 @@
 
 @synthesize selectedURL;
 @synthesize arrayOfFilesToIgnore;
+@synthesize duplicateDictionary;
 @synthesize windowController;
 
 // For the "Select Folder" button. 
@@ -52,23 +53,13 @@
 -(IBAction)searchForDuplicates:(id)sender
 {
     // Make and call the dictionary object
-    ELDuplicateFiles *duplicateDictionary = [[ELDuplicateFiles alloc] init];
-    [duplicateDictionary generateDictionaryFromURL:(id)self.selectedURL
+    duplicateDictionary = [[ELDuplicateFiles alloc] init];
+    [duplicateDictionary generateDuplicatesFromURL:(id)self.selectedURL
                                   ignoringTheFiles:(id)self.arrayOfFilesToIgnore];
-    
-    //Get the results
-    /*
-    NSMutableDictionary *duplicateDictionary = [[NSMutableDictionary alloc] init];
-    self.duplicateDictionary = currentDuplicates.duplicateDictionary;
-    
-     
-    NSArray *duplicateFilesArray = [[NSArray alloc] init];
-    duplicateFilesArray = [currentDuplicates duplicateFilesArray];
-    */
+
     
     // Open the output window
-     self.windowController = [[NSWindowController alloc] init];
-    [self.windowController initWithWindowNibName: @"duplicatesWindow"];
+     self.windowController = [[NSWindowController alloc] initWithWindowNibName: @"duplicatesWindow"];
     [self.windowController showWindow:self];
 
     

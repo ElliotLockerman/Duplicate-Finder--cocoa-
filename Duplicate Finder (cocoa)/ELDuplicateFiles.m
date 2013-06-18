@@ -36,7 +36,7 @@ NSMutableDictionary *allFiles;
 }
 
 
--(void)generateDictionaryFromURL:(id)URL ignoringTheFiles:(id)arrayOfFilesToIgnore;
+-(void)generateDuplicatesFromURL:(id)URL ignoringTheFiles:(id)arrayOfFilesToIgnore;
 {
     NSLog(@"Generating...");
     
@@ -115,9 +115,8 @@ NSMutableDictionary *allFiles;
         
         
     }
-    
-    NSLog(@"------------------------------\n dictionaryOfDuplicateFilesAndLocations: %@", dictionaryOfDuplicateFilesAndLocations);
-    
+    NSLog(@"------------------------------\n arrayOfDuplicateFiles: %@", arrrayOfDuplicateFiles);
+    NSLog(@"dictionaryOfDuplicateFilesAndLocations: %@", dictionaryOfDuplicateFilesAndLocations);
     
 }
 

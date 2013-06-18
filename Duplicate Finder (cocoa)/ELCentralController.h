@@ -11,13 +11,13 @@
 
 @interface ELCentralController : NSObject
 
-@property NSMutableString *selectedURL;
-@property NSMutableArray *arrayOfFilesToIgnore;
-@property (strong) NSWindowController *windowController;
-@property (strong) ELDuplicateFiles *duplicateDictionary;
+@property NSMutableString *selectedURL; //The URL the user has selected or entered in the textfield
+@property NSMutableArray *arrayOfFilesToIgnore; // From tokenizer
+@property (strong) NSWindowController *windowController; // To open the output window
+@property (strong) ELDuplicateFiles *duplicateDictionary; // To create, store, and manage the duplicate file data. 
 
-- (IBAction)openExistingDocument:(id)sender;
-- (IBAction)searchForDuplicates:(id)sender;
+- (IBAction)openExistingDocument:(id)sender; // For the "Select Folder" button
+- (IBAction)searchForDuplicates:(id)sender; // For the "search" button
 
 
 
