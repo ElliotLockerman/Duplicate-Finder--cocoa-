@@ -10,7 +10,7 @@
 
 @interface ELLeftTableController : NSObject
 
-- (NSInteger)numberOfRowsInTableView:(NSTableView *)tabelView;
+- (void/*NSInteger*/)numberOfRowsInTableView:(NSTableView *)tabelView;
 - (id)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row;
 
 @end

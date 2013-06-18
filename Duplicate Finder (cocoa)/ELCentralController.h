@@ -13,8 +13,8 @@
 
 @property NSMutableString *selectedURL;
 @property NSMutableArray *arrayOfFilesToIgnore;
-@property(strong) NSWindowController *windowController;
-@property ELDuplicateDictionary *duplicateDictionary;
+@property (strong) NSWindowController *windowController;
+@property (strong) ELDuplicateDictionary *duplicateDictionary;
 
 - (IBAction)openExistingDocument:(id)sender;
 - (IBAction)searchForDuplicates:(id)sender;

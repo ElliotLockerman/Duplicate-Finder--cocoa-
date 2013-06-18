@@ -10,8 +10,8 @@
 
 @interface ELDuplicateDictionary : NSObject
 
-@property NSMutableDictionary *duplicateDictionary;
-@property NSArray *duplicateFilesArray;
+@property (readonly,strong) NSMutableDictionary *duplicateDictionary;
+@property (readonly,strong) NSArray *duplicateFilesArray;
 
 -(void)generateDictionaryFromURL:(id)URL ignoringTheFiles:(id)arrayOfFilesToIgnore;
 

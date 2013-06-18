@@ -45,7 +45,6 @@
         }
         
     }];
-    //Print to textfield
     
 }
 
@@ -56,7 +55,7 @@
     // Make and call the dictionary object
     ELDuplicateDictionary *duplicateDictionary = [[ELDuplicateDictionary alloc] init];
     [duplicateDictionary generateDictionaryFromURL:(id)self.selectedURL
-                                ignoringTheFiles:(id)self.arrayOfFilesToIgnore];
+                                  ignoringTheFiles:(id)self.arrayOfFilesToIgnore];
     
     //Get the results
     /*

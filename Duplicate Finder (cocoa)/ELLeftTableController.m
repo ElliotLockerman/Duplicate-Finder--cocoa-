@@ -12,7 +12,7 @@
 
 @implementation ELLeftTableController
 
-- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
+- (void/*NSInteger*/)numberOfRowsInTableView:(NSTableView *)tableView
 {
 //    return [.duplicateDictionary.duplicateFilesArray count];
 }

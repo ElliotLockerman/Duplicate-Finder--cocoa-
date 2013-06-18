@@ -1231,14 +1231,14 @@
 			<object class="NSWindowTemplate" id="972006081">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{335, 755}, {1055, 260}}</string>
-				<int key="NSWTFlags">1949827072</int>
+				<string key="NSWindowRect">{{335, 755}, {1000, 260}}</string>
+				<int key="NSWTFlags">1954021376</int>
 				<string key="NSWindowTitle">Duplicate Finder (cocoa)</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<string key="NSWindowContentMaxSize">{3000, 260}</string>
-				<string key="NSWindowContentMinSize">{1055, 260}</string>
+				<string key="NSWindowContentMinSize">{1000, 260}</string>
 				<object class="NSView" key="NSWindowView" id="439893737">
 					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">264</int>
@@ -1287,7 +1287,7 @@
 						<object class="NSButton" id="874952754">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">297</int>
-							<string key="NSFrame">{{915, 174}, {126, 32}}</string>
+							<string key="NSFrame">{{860, 174}, {126, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="687493475"/>
@@ -1312,7 +1312,7 @@
 						<object class="NSTextField" id="950649414">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">298</int>
-							<string key="NSFrame">{{152, 178}, {751, 22}}</string>
+							<string key="NSFrame">{{152, 178}, {696, 22}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="874952754"/>
@@ -1368,9 +1368,10 @@
 						<object class="NSButton" id="372709129">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">297</int>
-							<string key="NSFrame">{{915, 33}, {126, 32}}</string>
+							<string key="NSFrame">{{860, 33}, {126, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="643400237">
@@ -1396,7 +1397,7 @@
 							<set class="NSMutableSet" key="NSDragTypes">
 								<string>NSStringPboardType</string>
 							</set>
-							<string key="NSFrame">{{152, 102}, {755, 22}}</string>
+							<string key="NSFrame">{{152, 102}, {700, 22}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="372709129"/>
@@ -1421,13 +1422,13 @@
 							<int key="NSTokenFieldVersion">2</int>
 						</object>
 					</array>
-					<string key="NSFrameSize">{1055, 260}</string>
+					<string key="NSFrameSize">{1000, 260}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="73127261"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
-				<string key="NSMinSize">{1055, 282}</string>
+				<string key="NSMinSize">{1000, 282}</string>
 				<string key="NSMaxSize">{3000, 282}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
