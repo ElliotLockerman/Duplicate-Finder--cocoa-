@@ -10,7 +10,8 @@
 
 @implementation ELLeftTableController
 
-@synthesize arrayForTable;
+NSArray *arrayForTable;
+
 @synthesize tableview;
 
 
@@ -21,6 +22,8 @@
     else if (self)
     {
         arrayForTable = [[NSArray alloc] initWithArray:input];
+        NSLog(@"arrayForTable in init: %@", arrayForTable);
+
     }
     return self;
 }
@@ -30,6 +33,7 @@
 {
     NSLog(@"arrayForTable in table: %@", arrayForTable);
 
+    
     return [arrayForTable count];
 }
 
@@ -47,13 +51,5 @@ viewForTableColumn:(NSTableColumn *)tableColumn
     return result;
 }
 
--(void)printArray
-{
-    NSLog(@"arrayForTabel in printArray: %@", arrayForTable);
-}
 
--(void)refresh
-{
-    [tableview reloadData];
-}
 @end

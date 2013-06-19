@@ -62,20 +62,12 @@
 
     outputWindowController = [[NSWindowController alloc] initWithWindowNibName: @"outputWindow"];
     
-    [outputWindowController showWindow:self];
     
     leftTableController = [[ELLeftTableController alloc] initWithInput:[duplicateFiles arrayOfDuplicateFiles]];
     
-    
-    [leftTableController printArray];
 
     [outputWindowController showWindow:self];
 
-    [leftTableController printArray];
-
-    [leftTableController refresh];
-    
-    [leftTableController printArray];
 
 
 }

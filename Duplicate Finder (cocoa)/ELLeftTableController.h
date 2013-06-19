@@ -10,7 +10,6 @@
 
 @interface ELLeftTableController : NSObject
 
-@property (strong) NSArray *arrayForTable;
 @property (weak) IBOutlet NSTableView *tableview;
 
 
@@ -20,8 +19,6 @@
 
 - (id)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row;
 
--(void)printArray;
 
--(void)refresh;
 
 @end
