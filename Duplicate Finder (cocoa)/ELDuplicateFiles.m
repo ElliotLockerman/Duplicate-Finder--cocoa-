@@ -110,11 +110,12 @@ NSMutableDictionary *allFiles;
                 
             }
         }
-        arrayOfDuplicateFiles = [dictionaryOfDuplicateFilesAndLocations allKeys];
         
         
         
     }
+    [arrayOfDuplicateFiles addObjectsFromArray:[dictionaryOfDuplicateFilesAndLocations allKeys]];
+
     NSLog(@"------------------------------\n arrayOfDuplicateFiles: %@", arrayOfDuplicateFiles);
     NSLog(@"dictionaryOfDuplicateFilesAndLocations: %@", dictionaryOfDuplicateFilesAndLocations);
     
