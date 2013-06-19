@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ELLeftTableController : NSObject
+@interface ELLeftTableController : NSObject{
+   
+    IBOutlet NSTableView *leftTableReference;
 
-@property (weak) IBOutlet NSTableView *tableview;
+}
+
 
 
 -(id)initWithInput:(NSArray*)input;
@@ -19,6 +22,7 @@
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row;
 
+- (void)tableViewSelectionDidChange:(NSNotification *)aNotification;
 
 
 @end

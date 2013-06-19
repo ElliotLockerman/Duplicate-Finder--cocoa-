@@ -15,11 +15,12 @@
 
 @implementation ELCentralController
 
+ELLeftTableController *leftTableController;
+
 @synthesize selectedURL;
 @synthesize arrayOfFilesToIgnore;
 @synthesize duplicateFiles;
 @synthesize outputWindowController;
-@synthesize leftTableController;
 
 // For the "Select Folder" button. 
 - (IBAction)openExistingDocument:(id)sender
@@ -69,8 +70,16 @@
     [outputWindowController showWindow:self];
 
 
-
 }
 
+- (IBAction)updateRightColumn:(id)sender
+{
+    /*
+    NSLog(@"-----------------------------------\n");
+
+    NSString *leftSelectedRow = [leftTableController getSelectedRow];
+    NSLog(@"Selected object is: @%@",leftSelectedRow);
+     */
+}
 
 @end

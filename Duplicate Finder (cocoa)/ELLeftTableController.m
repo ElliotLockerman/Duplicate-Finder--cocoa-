@@ -12,8 +12,6 @@
 
 NSArray *arrayForTable;
 
-@synthesize tableview;
-
 
 -(id)initWithInput:(NSArray*)input;
 {
@@ -22,6 +20,8 @@ NSArray *arrayForTable;
     else if (self)
     {
         arrayForTable = [[NSArray alloc] initWithArray:input];
+        NSLog(@"-----------------------------------\n");
+        NSLog(@"leftTableReference in init: %@", leftTableReference);
         NSLog(@"arrayForTable in init: %@", arrayForTable);
 
     }
@@ -31,8 +31,10 @@ NSArray *arrayForTable;
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
 {
-    NSLog(@"arrayForTable in table: %@", arrayForTable);
-
+    NSLog(@"-----------------------------------\n");
+    NSLog(@"tableView in table row query as set by table as argument: %@", tableView);
+    NSLog(@"leftTableReference in table row query: %@", leftTableReference);
+    NSLog(@"arrayForTable in table row query: %@", arrayForTable);
     
     return [arrayForTable count];
 }
@@ -42,16 +44,40 @@ NSArray *arrayForTable;
 objectValueForTableColumn:(NSTableColumn *)tableColumn
             row:(NSInteger)row
 {
-    NSLog(@"arrayForTable in table2: %@", arrayForTable);
+    NSLog(@"-----------------------------------\n");
+    NSLog(@"arrayForTable in table objectValue query: %@", arrayForTable);
+ 
+    NSLog(@"tableView in table object query, as set by table as argument: %@", tableView);
 
     
-    NSTextField *result = [tableView makeViewWithIdentifier:@"leftColumn" owner:self];
-    result/*.stringValue*/ = [arrayForTable objectAtIndex:row];
+    NSLog(@"leftTableReference in table object query: %@", leftTableReference);
     
-    NSLog(@"result: %@", result);
+    
+    //NSTextField *result = [self.tableView makeViewWithIdentifier:@"leftColumn" owner:self];
+    NSTextField *result/*.stringValue*/ = [arrayForTable objectAtIndex:row];
+    
+    NSLog(@"Object requested by table: %@", result);
     
     return result;
 }
+
+
+- (void)tableViewSelectionDidChange:(NSNotification *)aNotification
+{
+    NSLog(@"-----------------------------------\n");
+    
+    NSLog(@"leftTableReference in selection change: %@", leftTableReference);
+    
+    //[leftTableReference selectedRow];
+    
+    NSInteger currentRow = [leftTableReference selectedRow];
+    NSLog(@"currentRow: %ld", currentRow);
+    
+    NSString *rowValue = [arrayForTable objectAtIndex:[leftTableReference selectedRow]];
+    NSLog(@"rowValue: %@", rowValue);
+    
+}
+
 
 
 @end
