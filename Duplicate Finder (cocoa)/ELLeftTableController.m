@@ -39,7 +39,7 @@ NSArray *arrayForTable;
 
 
 - (id)tableView:(NSTableView *)tableView
-viewForTableColumn:(NSTableColumn *)tableColumn
+objectValueForTableColumn:(NSTableColumn *)tableColumn
             row:(NSInteger)row
 {
     NSLog(@"arrayForTable in table2: %@", arrayForTable);
@@ -47,6 +47,8 @@ viewForTableColumn:(NSTableColumn *)tableColumn
     
     NSTextField *result = [tableView makeViewWithIdentifier:@"leftColumn" owner:self];
     result.stringValue = [arrayForTable objectAtIndex:row];
+    
+    NSLog(@"result: %@", result);
     
     return result;
 }
