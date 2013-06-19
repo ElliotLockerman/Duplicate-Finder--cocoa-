@@ -17,6 +17,7 @@
 
 ELLeftTableController *leftTableController;
 
+
 @synthesize selectedURL;
 @synthesize arrayOfFilesToIgnore;
 @synthesize duplicateFiles;
@@ -74,12 +75,9 @@ ELLeftTableController *leftTableController;
 
 - (IBAction)updateRightColumn:(id)sender
 {
-    /*
-    NSLog(@"-----------------------------------\n");
 
-    NSString *leftSelectedRow = [leftTableController getSelectedRow];
-    NSLog(@"Selected object is: @%@",leftSelectedRow);
-     */
+    NSLog(@"-----------------------------------\n");
+    NSLog(@"Selected object in central controller is: %@",[leftTableController currentSelectedLeftRow]);
 }
 
 @end

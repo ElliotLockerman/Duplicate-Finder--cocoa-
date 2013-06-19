@@ -11,7 +11,8 @@
 @implementation ELLeftTableController
 
 NSArray *arrayForTable;
-
+NSInteger *currentRow;
+NSMutableString *currentSelectedLeftRow;
 
 -(id)initWithInput:(NSArray*)input;
 {
@@ -20,9 +21,17 @@ NSArray *arrayForTable;
     else if (self)
     {
         arrayForTable = [[NSArray alloc] initWithArray:input];
+        
+        
+        currentRow = 0;
+        currentSelectedLeftRow = [[NSMutableString alloc] init];
+        [self setCurrentSelectedLeftRow:[arrayForTable objectAtIndex:[leftTableReference selectedRow]]];
+        
+         
         NSLog(@"-----------------------------------\n");
         NSLog(@"leftTableReference in init: %@", leftTableReference);
         NSLog(@"arrayForTable in init: %@", arrayForTable);
+        //NSLog(@"currentSelectedLeftRow in init: %@", currentSelectedLeftRow);
 
     }
     return self;
@@ -44,6 +53,7 @@ NSArray *arrayForTable;
 objectValueForTableColumn:(NSTableColumn *)tableColumn
             row:(NSInteger)row
 {
+    
     NSLog(@"-----------------------------------\n");
     NSLog(@"arrayForTable in table objectValue query: %@", arrayForTable);
  
@@ -53,10 +63,10 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     NSLog(@"leftTableReference in table object query: %@", leftTableReference);
     
     
-    //NSTextField *result = [self.tableView makeViewWithIdentifier:@"leftColumn" owner:self];
+    //NSTextField *result = [self.tableView makeViewWithIdentifier:@"leftColumn" owner:self]; //Everyone had this, but i dont seem to need it. 
     NSTextField *result/*.stringValue*/ = [arrayForTable objectAtIndex:row];
     
-    NSLog(@"Object requested by table: %@", result);
+    //NSLog(@"Object requested by table: %@", result);
     
     return result;
 }
@@ -70,14 +80,32 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     
     //[leftTableReference selectedRow];
     
-    NSInteger currentRow = [leftTableReference selectedRow];
+    currentRow = [leftTableReference selectedRow];
     NSLog(@"currentRow: %ld", currentRow);
     
-    NSString *rowValue = [arrayForTable objectAtIndex:[leftTableReference selectedRow]];
-    NSLog(@"rowValue: %@", rowValue);
-    
+    [self setCurrentSelectedLeftRow:[arrayForTable objectAtIndex:[leftTableReference selectedRow]]];
+    NSLog(@"currentSelectedLeftRow in leftTableController: %@", currentSelectedLeftRow);
+
 }
 
+-(NSInteger *)currentRow
+{
+    return currentRow;
+}
 
+-(void)setCurrentRow:(NSInteger *)newValue;
+{
+    currentRow = newValue;
+}
+
+-(NSMutableString *)currentSelectedLeftRow
+{
+    return currentSelectedLeftRow;
+}
+
+-(void)setCurrentSelectedLeftRow:(NSMutableString *)newValue;
+{
+    currentSelectedLeftRow = newValue;
+}
 
 @end
