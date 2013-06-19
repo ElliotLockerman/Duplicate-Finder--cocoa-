@@ -10,9 +10,10 @@
 
 @interface ELDuplicateFiles : NSObject
 
-@property (readonly,strong) NSMutableArray *arrayOfDuplicateFiles; // Array of duplicate filenames.
 
 -(NSMutableDictionary *)dictionaryOfDuplicateFilesAndLocations;
+
+-(NSMutableArray *)arrayOfDuplicateFiles;
 
 -(void)generateDuplicatesFromURL:(id)URL ignoringTheFiles:(id)arrayOfFilesToIgnore; // Given a folder URL and a list of files to ignore, searches by filename for duplicates and adds their files names to  arrrayOfDuplicateFiles and their filenames and locations to dictionaryOfDuplicateFilesAndLocations
 

@@ -17,20 +17,11 @@
 
 -(id)initWithInput:(NSArray*)input;
 
+
+
+
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tabelView;
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row;
-
-- (void)tableViewSelectionDidChange:(NSNotification *)aNotification;
-
-
--(NSInteger *)currentRow;
-
--(void)setCurrentRow:(NSInteger *)newValue;
-
-
--(NSMutableString *)currentSelectedLeftRow;
-
--(void)setCurrentSelectedLeftRow:(NSMutableString *)newValue;
 
 @end

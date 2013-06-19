@@ -61,9 +61,7 @@ ELRightTableController *rightTableController;
     [duplicateFiles generateDuplicatesFromURL:(id)self.selectedURL
                                   ignoringTheFiles:(id)self.arrayOfFilesToIgnore];
 
-    // Call to display output window
-    
-
+    // Calls to display output window
     outputWindowController = [[NSWindowController alloc] initWithWindowNibName: @"outputWindow"];
     
     
@@ -78,13 +76,13 @@ ELRightTableController *rightTableController;
 
 - (IBAction)updateRightColumnWhenLeftIsChanged:(id)sender
 {
-
     NSLog(@"-----------------------------------\n");
-    NSLog(@"Selected object in central controller is: %@",[leftTableController currentSelectedLeftRow]);
-    
+    NSLog(@"Selected row in left table in central controller is: %ld",[leftTableCentralReference selectedRow]);
+    NSLog(@"Selected object in left table in central controller is: %@",[[duplicateFiles arrayOfDuplicateFiles] objectAtIndex:[leftTableCentralReference selectedRow]]);
+
     NSLog(@"The duplicate dictionary in the central controller is: %@", [duplicateFiles dictionaryOfDuplicateFilesAndLocations]);
     
-    NSArray *arrayOfLocationsForSelected = [[NSArray alloc] initWithArray:[[[duplicateFiles dictionaryOfDuplicateFilesAndLocations] valueForKey:[leftTableController currentSelectedLeftRow]] componentsSeparatedByString:@","]];
+    NSArray *arrayOfLocationsForSelected = [[NSArray alloc] initWithArray:[[[duplicateFiles dictionaryOfDuplicateFilesAndLocations] valueForKey:[[duplicateFiles arrayOfDuplicateFiles] objectAtIndex:[leftTableCentralReference selectedRow]]] componentsSeparatedByString:@","]];
     
     NSLog(@"arrayOfLocationsForSelected: %@", arrayOfLocationsForSelected);
     

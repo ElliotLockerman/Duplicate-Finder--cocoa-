@@ -12,6 +12,8 @@
 @interface ELCentralController : NSObject {
     
     IBOutlet NSTableView *rightTableCentralReference;
+    IBOutlet NSTableView *leftTableCentralReference;
+
 }
 
 @property NSMutableString *selectedURL; //The URL the user has selected or entered in the textfield
