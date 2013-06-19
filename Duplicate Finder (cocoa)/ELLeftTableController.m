@@ -46,7 +46,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
     
     NSTextField *result = [tableView makeViewWithIdentifier:@"leftColumn" owner:self];
-    result.stringValue = [arrayForTable objectAtIndex:row];
+    result/*.stringValue*/ = [arrayForTable objectAtIndex:row];
     
     NSLog(@"result: %@", result);
     
