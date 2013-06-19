@@ -1,5 +1,4 @@
 //
-//  ELController.m
 //  Duplicate Finder (cocoa)
 //
 //  Created by E L on 6/17/13.
@@ -12,14 +11,15 @@
 
 #import "ELCentralController.h"
 #import "ELDuplicateFiles.h"
+#import "ELLeftTableController.h"
 
 @implementation ELCentralController
 
-
 @synthesize selectedURL;
 @synthesize arrayOfFilesToIgnore;
-@synthesize duplicateDictionary;
-@synthesize windowController;
+@synthesize duplicateFiles;
+@synthesize outputWindowController;
+@synthesize leftTableController;
 
 // For the "Select Folder" button. 
 - (IBAction)openExistingDocument:(id)sender
@@ -50,20 +50,34 @@
 
 
 // For clicking the "Search" button. Generates the duplicate dictionary and displays the results. 
--(IBAction)searchForDuplicates:(id)sender
+-(IBAction)searchForDuplicatesAndDisplayResults:(id)sender
 {
     // Make and call the dictionary object
-    duplicateDictionary = [[ELDuplicateFiles alloc] init];
-    [duplicateDictionary generateDuplicatesFromURL:(id)self.selectedURL
+    duplicateFiles = [[ELDuplicateFiles alloc] init];
+    [duplicateFiles generateDuplicatesFromURL:(id)self.selectedURL
                                   ignoringTheFiles:(id)self.arrayOfFilesToIgnore];
 
+    // Call to display output window
     
-    // Open the output window
-     self.windowController = [[NSWindowController alloc] initWithWindowNibName: @"duplicatesWindow"];
-    [self.windowController showWindow:self];
 
+    outputWindowController = [[NSWindowController alloc] initWithWindowNibName: @"outputWindow"];
     
-    // Populate the source list
+    [outputWindowController showWindow:self];
+    
+    leftTableController = [[ELLeftTableController alloc] initWithInput:[duplicateFiles arrayOfDuplicateFiles]];
+    
+    
+    [leftTableController printArray];
+
+    [outputWindowController showWindow:self];
+
+    [leftTableController printArray];
+
+    [leftTableController refresh];
+    
+    [leftTableController printArray];
+
+
 }
 
 

@@ -11,13 +11,13 @@
 @implementation ELDuplicateFiles
 
 NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;
-NSMutableArray *arrrayOfDuplicateFiles;
+NSMutableArray *arrayOfDuplicateFiles;
 NSFileManager *fileManager;
 NSDirectoryEnumerator *directoryEnumerator;
 NSMutableDictionary *allFiles;
 
 @synthesize dictionaryOfDuplicateFilesAndLocations;
-@synthesize arrrayOfDuplicateFiles;
+@synthesize arrayOfDuplicateFiles;
 
 -(id)init
 {
@@ -27,7 +27,7 @@ NSMutableDictionary *allFiles;
     {
         dictionaryOfDuplicateFilesAndLocations = [[NSMutableDictionary alloc] init];
         allFiles = [[NSMutableDictionary alloc] init];
-        arrrayOfDuplicateFiles = [[NSArray alloc] init];
+        arrayOfDuplicateFiles = [[NSMutableArray alloc] init];
         fileManager = [[NSFileManager alloc] init];
 
     }
@@ -110,12 +110,12 @@ NSMutableDictionary *allFiles;
                 
             }
         }
-        arrrayOfDuplicateFiles = [dictionaryOfDuplicateFilesAndLocations allKeys];
+        arrayOfDuplicateFiles = [dictionaryOfDuplicateFilesAndLocations allKeys];
         
         
         
     }
-    NSLog(@"------------------------------\n arrayOfDuplicateFiles: %@", arrrayOfDuplicateFiles);
+    NSLog(@"------------------------------\n arrayOfDuplicateFiles: %@", arrayOfDuplicateFiles);
     NSLog(@"dictionaryOfDuplicateFilesAndLocations: %@", dictionaryOfDuplicateFilesAndLocations);
     
 }

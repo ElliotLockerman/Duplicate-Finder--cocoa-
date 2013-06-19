@@ -7,14 +7,30 @@
 //
 
 #import "ELLeftTableController.h"
-#import "ELCentralController.h"
-#import "ELDuplicateFiles.h"
 
 @implementation ELLeftTableController
 
-- (void/*NSInteger*/)numberOfRowsInTableView:(NSTableView *)tableView
+@synthesize arrayForTable;
+@synthesize tableview;
+
+
+-(id)initWithInput:(NSArray*)input;
 {
-//    return [.duplicateDictionary.duplicateFilesArray count];
+    self = [super init];
+    if (!self) return nil;
+    else if (self)
+    {
+        arrayForTable = [[NSArray alloc] initWithArray:input];
+    }
+    return self;
+}
+
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
+{
+    NSLog(@"arrayForTable in table: %@", arrayForTable);
+
+    return [arrayForTable count];
 }
 
 
@@ -22,21 +38,22 @@
 viewForTableColumn:(NSTableColumn *)tableColumn
             row:(NSInteger)row
 {
-    NSTextField *result = [tableView makeViewWithIdentifier:@"filesColumn" owner:self];
- //   result.stringValue = [ELCentralController.duplicateFilesArray objectAtIndex:row];
+    NSLog(@"arrayForTable in table2: %@", arrayForTable);
+
     
-    /*
-     if (result == nil)
-     {
-     result = [[[NSTextField alloc] initWithFrame:frame] autorelease];
-     result.identifier = @"filesColumn";
-     result.stringValue = [self.duplicateFilesArray objectAtIndex:row];
-     
-     return result;
-     }
-     */
+    NSTextField *result = [tableView makeViewWithIdentifier:@"leftColumn" owner:self];
+    result.stringValue = [arrayForTable objectAtIndex:row];
+    
     return result;
 }
 
+-(void)printArray
+{
+    NSLog(@"arrayForTabel in printArray: %@", arrayForTable);
+}
 
+-(void)refresh
+{
+    [tableview reloadData];
+}
 @end

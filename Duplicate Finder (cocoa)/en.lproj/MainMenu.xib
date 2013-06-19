@@ -1371,7 +1371,6 @@
 							<string key="NSFrame">{{860, 33}, {126, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="643400237">
@@ -2149,11 +2148,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">searchForDuplicates:</string>
+						<string key="label">searchForDuplicatesAndDisplayResults:</string>
 						<reference key="source" ref="994225334"/>
 						<reference key="destination" ref="372709129"/>
 					</object>
-					<int key="connectionID">695</int>
+					<int key="connectionID">1095</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3843,7 +3842,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">1094</int>
+			<int key="maxID">1095</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3860,15 +3859,15 @@
 					<string key="superclassName">NSObject</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="openExistingDocument:">id</string>
-						<string key="searchForDuplicates:">id</string>
+						<string key="searchForDuplicatesAndDisplayResults:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="openExistingDocument:">
 							<string key="name">openExistingDocument:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="searchForDuplicates:">
-							<string key="name">searchForDuplicates:</string>
+						<object class="IBActionInfo" key="searchForDuplicatesAndDisplayResults:">
+							<string key="name">searchForDuplicatesAndDisplayResults:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>

@@ -10,7 +10,18 @@
 
 @interface ELLeftTableController : NSObject
 
-- (void/*NSInteger*/)numberOfRowsInTableView:(NSTableView *)tabelView;
+@property (strong) NSArray *arrayForTable;
+@property (weak) IBOutlet NSTableView *tableview;
+
+
+-(id)initWithInput:(NSArray*)input;
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tabelView;
+
 - (id)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row;
+
+-(void)printArray;
+
+-(void)refresh;
 
 @end
