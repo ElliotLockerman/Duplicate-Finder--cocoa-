@@ -16,7 +16,8 @@ NSFileManager *fileManager;
 NSDirectoryEnumerator *directoryEnumerator;
 NSMutableDictionary *allFiles;
 
-@synthesize dictionaryOfDuplicateFilesAndLocations;
+NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The keys are filenames of files which exist in more than one location. Values are comma-delimited strings of all URLs where the file is found
+
 @synthesize arrayOfDuplicateFiles;
 
 -(id)init
@@ -35,6 +36,10 @@ NSMutableDictionary *allFiles;
 
 }
 
+-(NSMutableDictionary *)dictionaryOfDuplicateFilesAndLocations
+{
+    return dictionaryOfDuplicateFilesAndLocations;
+}
 
 -(void)generateDuplicatesFromURL:(id)URL ignoringTheFiles:(id)arrayOfFilesToIgnore;
 {

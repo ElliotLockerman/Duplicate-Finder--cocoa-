@@ -10,7 +10,7 @@
 
 @implementation ELLeftTableController
 
-NSArray *arrayForTable;
+NSArray *arrayForLeftTable;
 NSInteger *currentRow;
 NSMutableString *currentSelectedLeftRow;
 
@@ -20,17 +20,17 @@ NSMutableString *currentSelectedLeftRow;
     if (!self) return nil;
     else if (self)
     {
-        arrayForTable = [[NSArray alloc] initWithArray:input];
+        arrayForLeftTable = [[NSArray alloc] initWithArray:input];
         
         
         currentRow = 0;
         currentSelectedLeftRow = [[NSMutableString alloc] init];
-        [self setCurrentSelectedLeftRow:[arrayForTable objectAtIndex:[leftTableReference selectedRow]]];
+        [self setCurrentSelectedLeftRow:[arrayForLeftTable objectAtIndex:[leftTableReference selectedRow]]];
         
          
         NSLog(@"-----------------------------------\n");
         NSLog(@"leftTableReference in init: %@", leftTableReference);
-        NSLog(@"arrayForTable in init: %@", arrayForTable);
+        NSLog(@"arrayForLeftTable in init: %@", arrayForLeftTable);
         //NSLog(@"currentSelectedLeftRow in init: %@", currentSelectedLeftRow);
 
     }
@@ -41,11 +41,11 @@ NSMutableString *currentSelectedLeftRow;
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
 {
     NSLog(@"-----------------------------------\n");
-    NSLog(@"tableView in table row query as set by table as argument: %@", tableView);
+    NSLog(@"left table tableView in table row query as set by table as argument: %@", tableView);
     NSLog(@"leftTableReference in table row query: %@", leftTableReference);
-    NSLog(@"arrayForTable in table row query: %@", arrayForTable);
+    NSLog(@"arrayForLeftTable in table row query: %@", arrayForLeftTable);
     
-    return [arrayForTable count];
+    return [arrayForLeftTable count];
 }
 
 
@@ -55,18 +55,18 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 {
     
     NSLog(@"-----------------------------------\n");
-    NSLog(@"arrayForTable in table objectValue query: %@", arrayForTable);
+    NSLog(@"arrayForLeftTable in table objectValue query: %@", arrayForLeftTable);
  
-    NSLog(@"tableView in table object query, as set by table as argument: %@", tableView);
+    NSLog(@"left table tableView in table object query, as set by table as argument: %@", tableView);
 
     
     NSLog(@"leftTableReference in table object query: %@", leftTableReference);
     
     
     //NSTextField *result = [self.tableView makeViewWithIdentifier:@"leftColumn" owner:self]; //Everyone had this, but i dont seem to need it. 
-    NSTextField *result/*.stringValue*/ = [arrayForTable objectAtIndex:row];
+    NSTextField *result/*.stringValue*/ = [arrayForLeftTable objectAtIndex:row];
     
-    //NSLog(@"Object requested by table: %@", result);
+    NSLog(@"Object requested by left table: %@", result);
     
     return result;
 }
@@ -83,7 +83,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     currentRow = [leftTableReference selectedRow];
     NSLog(@"currentRow: %ld", currentRow);
     
-    [self setCurrentSelectedLeftRow:[arrayForTable objectAtIndex:[leftTableReference selectedRow]]];
+    [self setCurrentSelectedLeftRow:[arrayForLeftTable objectAtIndex:[leftTableReference selectedRow]]];
     NSLog(@"currentSelectedLeftRow in leftTableController: %@", currentSelectedLeftRow);
 
 }

@@ -9,18 +9,20 @@
 #import "ELDuplicateFiles.h"
 #import "ELLeftTableController.h"
 
-@interface ELCentralController : NSObject
+@interface ELCentralController : NSObject {
+    
+    IBOutlet NSTableView *rightTableCentralReference;
+}
 
 @property NSMutableString *selectedURL; //The URL the user has selected or entered in the textfield
 @property NSMutableArray *arrayOfFilesToIgnore; // From tokenizer
-@property (strong) ELDuplicateFiles *duplicateFiles; // To create, store, and manage the duplicate file data. 
 @property (strong) NSWindowController *outputWindowController;
 
 - (IBAction)openExistingDocument:(id)sender; // For the "Select Folder" button
 
 - (IBAction)searchForDuplicatesAndDisplayResults:(id)sender; // For the "search" button. In addition to starting the search, opens a new window to display the output.
 
-- (IBAction)updateRightColumn:(id)sender;
+- (IBAction)updateRightColumnWhenLeftIsChanged:(id)sender;
 
 
 @end

@@ -20,6 +20,7 @@
 		652C3DE9176F461400C6B40D /* ELCentralController.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C3DE8176F461400C6B40D /* ELCentralController.m */; };
 		652C3E11176F7F4800C6B40D /* logo.icns in Resources */ = {isa = PBXBuildFile; fileRef = 652C3E10176F7F4800C6B40D /* logo.icns */; };
 		652C3E64176FEF3700C6B40D /* outputWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 652C3E63176FEF3700C6B40D /* outputWindow.xib */; };
+		6572F2CF17725240000D2E1D /* ELRightTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6572F2CE17725240000D2E1D /* ELRightTableController.m */; };
 		65D1671D1770ACC60017F2C4 /* ELLeftTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1671C1770ACC60017F2C4 /* ELLeftTableController.m */; };
 		65D167201770B8570017F2C4 /* ELDuplicateFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1671F1770B8570017F2C4 /* ELDuplicateFiles.m */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,8 @@
 		652C3DE8176F461400C6B40D /* ELCentralController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCentralController.m; sourceTree = "<group>"; };
 		652C3E10176F7F4800C6B40D /* logo.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = logo.icns; sourceTree = "<group>"; };
 		652C3E63176FEF3700C6B40D /* outputWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = outputWindow.xib; sourceTree = "<group>"; };
+		6572F2CD17725240000D2E1D /* ELRightTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELRightTableController.h; sourceTree = "<group>"; };
+		6572F2CE17725240000D2E1D /* ELRightTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELRightTableController.m; sourceTree = "<group>"; };
 		65D1671B1770ACC60017F2C4 /* ELLeftTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELLeftTableController.h; sourceTree = "<group>"; };
 		65D1671C1770ACC60017F2C4 /* ELLeftTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELLeftTableController.m; sourceTree = "<group>"; };
 		65D1671E1770B8570017F2C4 /* ELDuplicateFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELDuplicateFiles.h; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 				65D1671F1770B8570017F2C4 /* ELDuplicateFiles.m */,
 				65D1671B1770ACC60017F2C4 /* ELLeftTableController.h */,
 				65D1671C1770ACC60017F2C4 /* ELLeftTableController.m */,
+				6572F2CD17725240000D2E1D /* ELRightTableController.h */,
+				6572F2CE17725240000D2E1D /* ELRightTableController.m */,
 				652C3DBF176E95F300C6B40D /* MainMenu.xib */,
 				652C3DB1176E95F300C6B40D /* Supporting Files */,
 			);
@@ -289,6 +294,7 @@
 				652C3DE9176F461400C6B40D /* ELCentralController.m in Sources */,
 				65D1671D1770ACC60017F2C4 /* ELLeftTableController.m in Sources */,
 				65D167201770B8570017F2C4 /* ELDuplicateFiles.m in Sources */,
+				6572F2CF17725240000D2E1D /* ELRightTableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

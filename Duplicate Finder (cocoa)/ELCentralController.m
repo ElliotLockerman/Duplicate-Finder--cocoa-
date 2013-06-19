@@ -12,15 +12,17 @@
 #import "ELCentralController.h"
 #import "ELDuplicateFiles.h"
 #import "ELLeftTableController.h"
+#import "ELRightTableController.h"
 
 @implementation ELCentralController
 
+ELDuplicateFiles *duplicateFiles;
 ELLeftTableController *leftTableController;
-
+ELRightTableController *rightTableController;
 
 @synthesize selectedURL;
 @synthesize arrayOfFilesToIgnore;
-@synthesize duplicateFiles;
+
 @synthesize outputWindowController;
 
 // For the "Select Folder" button. 
@@ -67,17 +69,27 @@ ELLeftTableController *leftTableController;
     
     leftTableController = [[ELLeftTableController alloc] initWithInput:[duplicateFiles arrayOfDuplicateFiles]];
     
-
+    rightTableController = [[ELRightTableController alloc] initWithInput:[[[duplicateFiles dictionaryOfDuplicateFilesAndLocations] valueForKey:[[duplicateFiles arrayOfDuplicateFiles] objectAtIndex:0]] componentsSeparatedByString:@","]];
+    
     [outputWindowController showWindow:self];
 
 
 }
 
-- (IBAction)updateRightColumn:(id)sender
+- (IBAction)updateRightColumnWhenLeftIsChanged:(id)sender
 {
 
     NSLog(@"-----------------------------------\n");
     NSLog(@"Selected object in central controller is: %@",[leftTableController currentSelectedLeftRow]);
+    
+    NSLog(@"The duplicate dictionary in the central controller is: %@", [duplicateFiles dictionaryOfDuplicateFilesAndLocations]);
+    
+    NSArray *arrayOfLocationsForSelected = [[NSArray alloc] initWithArray:[[[duplicateFiles dictionaryOfDuplicateFilesAndLocations] valueForKey:[leftTableController currentSelectedLeftRow]] componentsSeparatedByString:@","]];
+    
+    NSLog(@"arrayOfLocationsForSelected: %@", arrayOfLocationsForSelected);
+    
+    [rightTableController setArrayForRightTable:arrayOfLocationsForSelected];
+    [rightTableCentralReference reloadData];
 }
 
 @end
