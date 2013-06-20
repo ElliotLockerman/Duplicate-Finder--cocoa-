@@ -10,9 +10,11 @@
 #import "ELLeftTableController.h"
 #import "ELSearchSheetController.h"
 
-@interface ELCentralController : NSObject {
+@interface ELCentralController : NSObject{
     
     IBOutlet NSWindow *duplicateFinderReference;
+    
+    IBOutlet NSWindow *searchSheetReference;
     
     IBOutlet NSTableView *rightTableCentralReference;
     IBOutlet NSTableView *leftTableCentralReference;
@@ -29,8 +31,9 @@
 
 -(IBAction)newSearch:(id)sender;
 
+- (IBAction)closeSearchSheet:(id)sender;
 
-
+- (void)didEndSheet:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo;
 
 
 

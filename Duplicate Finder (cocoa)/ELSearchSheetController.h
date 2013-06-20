@@ -15,10 +15,4 @@
 
 }
 
-
--(void)showSheet;
-
-- (IBAction)closeSearch:(id)sender;
-
-- (void)didEndSheet:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo;
 @end

@@ -22,29 +22,4 @@
     return self;
 }
 
--(void)showSheet
-{
-    [NSBundle loadNibNamed:@"SearchSheet" owner:self];
-
-    NSLog(@"%@", searchSheetReference);
-
-    [NSApp beginSheet:searchSheetReference
-       modalForWindow:duplicateFinderReference
-        modalDelegate:self
-       didEndSelector:@selector(didEndSheet:returnCode:contextInfo:)
-          contextInfo:nil];
-
-}
-
-
-- (IBAction)closeSearch:(id)sender
-{
-    [NSApp endSheet:searchSheetReference];
-}
-
-- (void)didEndSheet:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
-{
-    [sheet orderOut:self];
-}
-
 @end

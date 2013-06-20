@@ -140,21 +140,21 @@
 		652C3DB0176E95F300C6B40D /* Duplicate Finder (cocoa) */ = {
 			isa = PBXGroup;
 			children = (
-				654C2BDF17735E13005CB955 /* icon.png */,
 				652C3DBC176E95F300C6B40D /* AppDelegate.h */,
 				652C3DBD176E95F300C6B40D /* AppDelegate.m */,
 				652C3DE7176F461400C6B40D /* ELCentralController.h */,
 				652C3DE8176F461400C6B40D /* ELCentralController.m */,
-				654C2BDD1772AC09005CB955 /* SearchSheet.xib */,
 				65D1671E1770B8570017F2C4 /* ELDuplicateFiles.h */,
 				65D1671F1770B8570017F2C4 /* ELDuplicateFiles.m */,
 				65D1671B1770ACC60017F2C4 /* ELLeftTableController.h */,
 				65D1671C1770ACC60017F2C4 /* ELLeftTableController.m */,
 				6572F2CD17725240000D2E1D /* ELRightTableController.h */,
 				6572F2CE17725240000D2E1D /* ELRightTableController.m */,
-				652C3DBF176E95F300C6B40D /* MainMenu.xib */,
 				6519AB7A17739937001C56AD /* ELSearchSheetController.h */,
 				6519AB7B17739937001C56AD /* ELSearchSheetController.m */,
+				654C2BDF17735E13005CB955 /* icon.png */,
+				652C3DBF176E95F300C6B40D /* MainMenu.xib */,
+				654C2BDD1772AC09005CB955 /* SearchSheet.xib */,
 				652C3DB1176E95F300C6B40D /* Supporting Files */,
 			);
 			path = "Duplicate Finder (cocoa)";

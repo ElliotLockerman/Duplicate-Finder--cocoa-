@@ -36,13 +36,29 @@ NSMutableArray *arrayOfLocationsForSelected;
     //[NSBundle loadNibNamed:@"SearchSheet" owner:self];
     
     assert ([searchSheetController window]);
-    [NSApp beginSheet:([searchSheetController window])
+    assert (duplicateFinderReference);
+    
+    [NSApp beginSheet:[searchSheetController window]
        modalForWindow:duplicateFinderReference
         modalDelegate:self
        didEndSelector:@selector(didEndSheet:returnCode:contextInfo:)
           contextInfo:nil];
-
+     
 }
+
+- (IBAction)closeSearchSheet:(id)sender
+{
+    assert(searchSheetReference);
+    NSLog(@"%@", searchSheetReference);
+    [NSApp endSheet:searchSheetReference];
+}
+
+
+- (void)didEndSheet:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
+{
+    [sheet orderOut:self];
+}
+
 
 
 
@@ -77,6 +93,8 @@ NSMutableArray *arrayOfLocationsForSelected;
 // For clicking the "Search" button. Generates the duplicate dictionary and displays the results. 
 -(IBAction)searchForDuplicatesAndDisplayResults:(id)sender
 {
+    [self closeSearchSheet:nil];
+    
     // Make and call the dictionary object
     duplicateFiles = [[ELDuplicateFiles alloc] init];
     [duplicateFiles generateDuplicatesFromURL:(id)self.selectedURL
