@@ -60,9 +60,7 @@ NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The
     
     for (NSURL *currentURL in directoryEnumerator)
     {
-        NSLog(@"-----------------------------------");
-        
-        NSLog(@"currentURL: %@", currentURL);
+
         
         NSNumber *currentURLIsDirectory;
         [currentURL getResourceValue:&currentURLIsDirectory forKey:NSURLIsDirectoryKey error:NULL];
@@ -73,13 +71,11 @@ NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The
             // Get the filename
             NSMutableString *currentFileBasename;
             [currentURL getResourceValue:&currentFileBasename forKey:NSURLNameKey error:NULL];
-            NSLog(@"currentFileBasename: %@", currentFileBasename);
             
             // Get the location
             NSMutableString *directoryOfCurrentFile = [[NSMutableString alloc] init];
-            [directoryOfCurrentFile setString:[[currentURL absoluteString] stringByDeletingLastPathComponent]];
-            
-            NSLog(@"directoryOfCurrentFile: %@", directoryOfCurrentFile);
+            [directoryOfCurrentFile setString:[currentURL absoluteString]];
+
             
             // Add to dictionary
             if([arrayOfFilesToIgnore containsObject:currentFileBasename])
@@ -89,7 +85,6 @@ NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The
             else if([allFiles objectForKey:currentFileBasename] == nil) // If its not a duplicate (at this point)
             {
                 [allFiles setObject:directoryOfCurrentFile forKey:currentFileBasename];
-                NSLog(@"allFiles: %@", allFiles);
             }
             else //If its a duplicate
             {
@@ -101,7 +96,6 @@ NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The
                     [bothURLs appendFormat:@",%@", [allFiles objectForKey:currentFileBasename]];
                     
                     [dictionaryOfDuplicateFilesAndLocations setObject:bothURLs forKey:currentFileBasename];
-                    NSLog(@"dictionaryOfDuplicateFilesAndLocations: %@", dictionaryOfDuplicateFilesAndLocations);
                     
                 }
                 else // If its already in the duplciate dictionary
@@ -112,7 +106,6 @@ NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The
                     [newURL appendFormat:@",%@", directoryOfCurrentFile];
                     
                     [dictionaryOfDuplicateFilesAndLocations setObject:newURL forKey:currentFileBasename];
-                    NSLog(@"dictionaryOfDuplicateFilesAndLocations: %@", dictionaryOfDuplicateFilesAndLocations);
                     
                 }
                 
@@ -124,8 +117,6 @@ NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The
     }
     [arrayOfDuplicateFiles addObjectsFromArray:[dictionaryOfDuplicateFilesAndLocations allKeys]];
 
-    NSLog(@"------------------------------\n arrayOfDuplicateFiles: %@", arrayOfDuplicateFiles);
-    NSLog(@"dictionaryOfDuplicateFilesAndLocations: %@", dictionaryOfDuplicateFilesAndLocations);
     
 }
 

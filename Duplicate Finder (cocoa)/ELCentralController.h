@@ -24,7 +24,9 @@
 
 - (IBAction)searchForDuplicatesAndDisplayResults:(id)sender; // For the "search" button. In addition to starting the search, opens a new window to display the output.
 
+
 - (IBAction)updateRightColumnWhenLeftIsChanged:(id)sender;
 
+- (IBAction)showInFinderWhenRightColumnIsClicked:(id)sender;
 
 @end

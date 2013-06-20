@@ -391,7 +391,6 @@
 													<string key="NSFrame">{{1, 431}, {767, 15}}</string>
 													<reference key="NSSuperview" ref="705524471"/>
 													<reference key="NSWindow"/>
-													<reference key="NSNextKeyView"/>
 													<string key="NSReuseIdentifierKey">_NS:60</string>
 													<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 													<int key="NSsFlags">1</int>
@@ -467,7 +466,7 @@
 			<object class="NSCustomObject" id="684781917">
 				<string key="NSClassName">ELLeftTableController</string>
 			</object>
-			<object class="NSCustomObject" id="884511949">
+			<object class="NSCustomObject" id="683894880">
 				<string key="NSClassName">ELRightTableController</string>
 			</object>
 		</array>
@@ -477,7 +476,7 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">dataSource</string>
 						<reference key="source" ref="911587354"/>
-						<reference key="destination" ref="884511949"/>
+						<reference key="destination" ref="683894880"/>
 					</object>
 					<int key="connectionID">196</int>
 				</object>
@@ -485,7 +484,7 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">delegate</string>
 						<reference key="source" ref="911587354"/>
-						<reference key="destination" ref="884511949"/>
+						<reference key="destination" ref="683894880"/>
 					</object>
 					<int key="connectionID">197</int>
 				</object>
@@ -538,9 +537,17 @@
 					<int key="connectionID">207</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">showInFinderWhenRightColumnIsClicked:</string>
+						<reference key="source" ref="124040776"/>
+						<reference key="destination" ref="911587354"/>
+					</object>
+					<int key="connectionID">209</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">rightTableReference</string>
-						<reference key="source" ref="884511949"/>
+						<reference key="source" ref="683894880"/>
 						<reference key="destination" ref="911587354"/>
 					</object>
 					<int key="connectionID">198</int>
@@ -971,7 +978,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">194</int>
-						<reference key="object" ref="884511949"/>
+						<reference key="object" ref="683894880"/>
 						<reference key="parent" ref="0"/>
 					</object>
 				</array>
@@ -1050,7 +1057,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">208</int>
+			<int key="maxID">209</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1060,6 +1067,7 @@
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="openExistingDocument:">id</string>
 						<string key="searchForDuplicatesAndDisplayResults:">id</string>
+						<string key="showInFinderWhenRightColumnIsClicked:">id</string>
 						<string key="updateRightColumnWhenLeftIsChanged:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
@@ -1069,6 +1077,10 @@
 						</object>
 						<object class="IBActionInfo" key="searchForDuplicatesAndDisplayResults:">
 							<string key="name">searchForDuplicatesAndDisplayResults:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showInFinderWhenRightColumnIsClicked:">
+							<string key="name">showInFinderWhenRightColumnIsClicked:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="updateRightColumnWhenLeftIsChanged:">
