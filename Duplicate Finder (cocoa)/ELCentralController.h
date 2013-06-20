@@ -11,14 +11,28 @@
 
 @interface ELCentralController : NSObject {
     
+    IBOutlet NSWindow *duplicateFinderReference;
+    
     IBOutlet NSTableView *rightTableCentralReference;
     IBOutlet NSTableView *leftTableCentralReference;
+    
 
 }
 
 @property NSMutableString *selectedURL; //The URL the user has selected or entered in the textfield
 @property NSMutableArray *arrayOfFilesToIgnore; // From tokenizer
 @property (strong) NSWindowController *outputWindowController;
+
+
+
+
+-(void)newSearch;
+
+- (void)alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode
+        contextInfo:(void *)contextInfo;
+
+
+
 
 - (IBAction)openExistingDocument:(id)sender; // For the "Select Folder" button
 

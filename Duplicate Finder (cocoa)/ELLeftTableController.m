@@ -20,7 +20,6 @@ NSArray *arrayForLeftTable;
     else if (self)
     {
         arrayForLeftTable = [[NSArray alloc] initWithArray:input];
-
     }
     return self;
 }

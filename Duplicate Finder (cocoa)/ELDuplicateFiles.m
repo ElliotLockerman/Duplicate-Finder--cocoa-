@@ -116,7 +116,7 @@ NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The
         
     }
     [arrayOfDuplicateFiles addObjectsFromArray:[dictionaryOfDuplicateFilesAndLocations allKeys]];
-
+    NSLog(@"Done!");
     
 }
 

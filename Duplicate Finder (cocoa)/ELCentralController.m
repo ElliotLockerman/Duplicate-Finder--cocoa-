@@ -25,6 +25,31 @@ NSMutableArray *arrayOfLocationsForSelected;
 @synthesize arrayOfFilesToIgnore;
 @synthesize outputWindowController;
 
+
+
+
+-(void)newSearch;
+{
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert addButtonWithTitle:@"OK"];
+    [alert addButtonWithTitle:@"Cancel"];
+    [alert setMessageText:@"Delete the record?"];
+    [alert setInformativeText:@"Deleted records cannot be restored."];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    
+    [alert beginSheetModalForWindow:duplicateFinderReference modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
+}
+
+
+
+- (void)alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode
+        contextInfo:(void *)contextInfo
+{
+    
+}
+
+
+
 // For the "Select Folder" button. 
 - (IBAction)openExistingDocument:(id)sender
 {
@@ -61,9 +86,6 @@ NSMutableArray *arrayOfLocationsForSelected;
     [duplicateFiles generateDuplicatesFromURL:(id)self.selectedURL
                                   ignoringTheFiles:(id)self.arrayOfFilesToIgnore];
 
-    // Calls to display output window
-    outputWindowController = [[NSWindowController alloc] initWithWindowNibName: @"outputWindow"]; // Create window controller, loaded with xib name. 
-    
 
     leftTableController = [[ELLeftTableController alloc] initWithInput:[duplicateFiles arrayOfDuplicateFiles]]; // Create left table controller, and pass it the array of filenames.
     
@@ -71,10 +93,10 @@ NSMutableArray *arrayOfLocationsForSelected;
     arrayOfLocationsForSelected = [[NSMutableArray alloc] init];
     [arrayOfLocationsForSelected addObjectsFromArray:[[[duplicateFiles dictionaryOfDuplicateFilesAndLocations] valueForKey:[[duplicateFiles arrayOfDuplicateFiles] objectAtIndex:0]] componentsSeparatedByString:@","]]; // Add objects from array produced by: Get the dictionary from duplicatefiles. Get the object for the first key (the defaut). Split the values by a comma, producing an array.
     rightTableController = [[ELRightTableController alloc] initWithInput:arrayOfLocationsForSelected]; // Create the right table controller give it default input 
-    
-    
-    
-    [outputWindowController showWindow:self]; //Show the output window.
+
+    [leftTableCentralReference reloadData]; // Redraw the right column
+    [rightTableCentralReference reloadData]; // Redraw the right column
+
 
 
 }
