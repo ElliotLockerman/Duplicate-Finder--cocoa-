@@ -13,6 +13,7 @@
 #import "ELDuplicateFiles.h"
 #import "ELLeftTableController.h"
 #import "ELRightTableController.h"
+#import "ELSearchSheetController.h"
 
 @implementation ELCentralController
 
@@ -27,25 +28,20 @@ NSMutableArray *arrayOfLocationsForSelected;
 
 
 
-
--(void)newSearch;
+-(IBAction)newSearch:(id)sender
 {
-    NSAlert *alert = [[NSAlert alloc] init];
-    [alert addButtonWithTitle:@"OK"];
-    [alert addButtonWithTitle:@"Cancel"];
-    [alert setMessageText:@"Delete the record?"];
-    [alert setInformativeText:@"Deleted records cannot be restored."];
-    [alert setAlertStyle:NSWarningAlertStyle];
+    searchSheetController = [[ELSearchSheetController alloc] initWithWindowNibName:@"SearchSheet"];
     
-    [alert beginSheetModalForWindow:duplicateFinderReference modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
-}
-
-
-
-- (void)alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode
-        contextInfo:(void *)contextInfo
-{
     
+    //[NSBundle loadNibNamed:@"SearchSheet" owner:self];
+    
+    assert ([searchSheetController window]);
+    [NSApp beginSheet:([searchSheetController window])
+       modalForWindow:duplicateFinderReference
+        modalDelegate:self
+       didEndSelector:@selector(didEndSheet:returnCode:contextInfo:)
+          contextInfo:nil];
+
 }
 
 

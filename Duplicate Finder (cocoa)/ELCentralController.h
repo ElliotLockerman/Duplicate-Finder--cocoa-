@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "ELDuplicateFiles.h"
 #import "ELLeftTableController.h"
+#import "ELSearchSheetController.h"
 
 @interface ELCentralController : NSObject {
     
@@ -16,6 +17,7 @@
     IBOutlet NSTableView *rightTableCentralReference;
     IBOutlet NSTableView *leftTableCentralReference;
     
+    ELSearchSheetController *searchSheetController;
 
 }
 
@@ -25,11 +27,9 @@
 
 
 
+-(IBAction)newSearch:(id)sender;
 
--(void)newSearch;
 
-- (void)alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode
-        contextInfo:(void *)contextInfo;
 
 
 
@@ -42,5 +42,6 @@
 - (IBAction)updateRightColumnWhenLeftIsChanged:(id)sender;
 
 - (IBAction)showInFinderWhenRightColumnIsClicked:(id)sender;
+
 
 @end

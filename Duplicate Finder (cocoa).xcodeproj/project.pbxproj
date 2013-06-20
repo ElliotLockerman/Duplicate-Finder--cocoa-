@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6519AB7C17739937001C56AD /* ELSearchSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6519AB7B17739937001C56AD /* ELSearchSheetController.m */; };
 		652C3DAB176E95F300C6B40D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652C3DAA176E95F300C6B40D /* Cocoa.framework */; };
 		652C3DB5176E95F300C6B40D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 652C3DB3176E95F300C6B40D /* InfoPlist.strings */; };
 		652C3DB7176E95F300C6B40D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C3DB6176E95F300C6B40D /* main.m */; };
@@ -19,6 +20,9 @@
 		652C3DD5176E95F300C6B40D /* Duplicate_Finder__cocoa_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C3DD4176E95F300C6B40D /* Duplicate_Finder__cocoa_Tests.m */; };
 		652C3DE9176F461400C6B40D /* ELCentralController.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C3DE8176F461400C6B40D /* ELCentralController.m */; };
 		652C3E11176F7F4800C6B40D /* logo.icns in Resources */ = {isa = PBXBuildFile; fileRef = 652C3E10176F7F4800C6B40D /* logo.icns */; };
+		654C2BDE1772AC09005CB955 /* SearchSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 654C2BDD1772AC09005CB955 /* SearchSheet.xib */; };
+		654C2BE017735E13005CB955 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 654C2BDF17735E13005CB955 /* icon.png */; };
+		654C2BE217738AB7005CB955 /* Automator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654C2BE117738AB7005CB955 /* Automator.framework */; };
 		6572F2CF17725240000D2E1D /* ELRightTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6572F2CE17725240000D2E1D /* ELRightTableController.m */; };
 		65D1671D1770ACC60017F2C4 /* ELLeftTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1671C1770ACC60017F2C4 /* ELLeftTableController.m */; };
 		65D167201770B8570017F2C4 /* ELDuplicateFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1671F1770B8570017F2C4 /* ELDuplicateFiles.m */; };
@@ -35,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6519AB7A17739937001C56AD /* ELSearchSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELSearchSheetController.h; sourceTree = "<group>"; };
+		6519AB7B17739937001C56AD /* ELSearchSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELSearchSheetController.m; sourceTree = "<group>"; };
 		652C3DA7176E95F300C6B40D /* Duplicate Finder (cocoa).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Duplicate Finder (cocoa).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		652C3DAA176E95F300C6B40D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		652C3DAD176E95F300C6B40D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -57,6 +63,9 @@
 		652C3DE7176F461400C6B40D /* ELCentralController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCentralController.h; sourceTree = "<group>"; };
 		652C3DE8176F461400C6B40D /* ELCentralController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCentralController.m; sourceTree = "<group>"; };
 		652C3E10176F7F4800C6B40D /* logo.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = logo.icns; sourceTree = "<group>"; };
+		654C2BDD1772AC09005CB955 /* SearchSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchSheet.xib; sourceTree = "<group>"; };
+		654C2BDF17735E13005CB955 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../../Desktop/icon.png; sourceTree = "<group>"; };
+		654C2BE117738AB7005CB955 /* Automator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Automator.framework; path = System/Library/Frameworks/Automator.framework; sourceTree = SDKROOT; };
 		6572F2CD17725240000D2E1D /* ELRightTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELRightTableController.h; sourceTree = "<group>"; };
 		6572F2CE17725240000D2E1D /* ELRightTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELRightTableController.m; sourceTree = "<group>"; };
 		65D1671B1770ACC60017F2C4 /* ELLeftTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELLeftTableController.h; sourceTree = "<group>"; };
@@ -71,6 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				652C3DAB176E95F300C6B40D /* Cocoa.framework in Frameworks */,
+				654C2BE217738AB7005CB955 /* Automator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +99,7 @@
 		652C3D9E176E95F300C6B40D = {
 			isa = PBXGroup;
 			children = (
+				654C2BE117738AB7005CB955 /* Automator.framework */,
 				652C3E10176F7F4800C6B40D /* logo.icns */,
 				652C3DB0176E95F300C6B40D /* Duplicate Finder (cocoa) */,
 				652C3DCD176E95F300C6B40D /* Duplicate Finder (cocoa)Tests */,
@@ -129,10 +140,12 @@
 		652C3DB0176E95F300C6B40D /* Duplicate Finder (cocoa) */ = {
 			isa = PBXGroup;
 			children = (
+				654C2BDF17735E13005CB955 /* icon.png */,
 				652C3DBC176E95F300C6B40D /* AppDelegate.h */,
 				652C3DBD176E95F300C6B40D /* AppDelegate.m */,
 				652C3DE7176F461400C6B40D /* ELCentralController.h */,
 				652C3DE8176F461400C6B40D /* ELCentralController.m */,
+				654C2BDD1772AC09005CB955 /* SearchSheet.xib */,
 				65D1671E1770B8570017F2C4 /* ELDuplicateFiles.h */,
 				65D1671F1770B8570017F2C4 /* ELDuplicateFiles.m */,
 				65D1671B1770ACC60017F2C4 /* ELLeftTableController.h */,
@@ -140,6 +153,8 @@
 				6572F2CD17725240000D2E1D /* ELRightTableController.h */,
 				6572F2CE17725240000D2E1D /* ELRightTableController.m */,
 				652C3DBF176E95F300C6B40D /* MainMenu.xib */,
+				6519AB7A17739937001C56AD /* ELSearchSheetController.h */,
+				6519AB7B17739937001C56AD /* ELSearchSheetController.m */,
 				652C3DB1176E95F300C6B40D /* Supporting Files */,
 			);
 			path = "Duplicate Finder (cocoa)";
@@ -251,6 +266,8 @@
 				652C3DBB176E95F300C6B40D /* Credits.rtf in Resources */,
 				652C3DC1176E95F300C6B40D /* MainMenu.xib in Resources */,
 				652C3E11176F7F4800C6B40D /* logo.icns in Resources */,
+				654C2BDE1772AC09005CB955 /* SearchSheet.xib in Resources */,
+				654C2BE017735E13005CB955 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +308,7 @@
 				65D1671D1770ACC60017F2C4 /* ELLeftTableController.m in Sources */,
 				65D167201770B8570017F2C4 /* ELDuplicateFiles.m in Sources */,
 				6572F2CF17725240000D2E1D /* ELRightTableController.m in Sources */,
+				6519AB7C17739937001C56AD /* ELSearchSheetController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
