@@ -44,11 +44,23 @@ NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The
     return arrayOfDuplicateFiles;
 }
 
--(void)generateDuplicatesFromURL:(id)URL ignoringTheFiles:(id)arrayOfFilesToIgnore;
+-(int)generateDuplicatesFromURL:(id)URL ignoringTheFiles:(id)arrayOfFilesToIgnore;
 {
     NSLog(@"Generating...");
+
+    // Check that directory actually exists. If not, open alert and break.
+    BOOL isDirectory;
+    BOOL exists = [fileManager fileExistsAtPath:[URL path] isDirectory:&isDirectory];
+    if (!exists || !isDirectory)
+        {
+            NSAlert* msgBox = [[NSAlert alloc] init];
+            [msgBox setMessageText: @"The folder your specified does not exist. Please try again."];
+            [msgBox addButtonWithTitle: @"OK"];
+            [msgBox runModal];
+            return 0; //Failure
+        }
     
-    
+    NSLog(@"%@", URL);
     
     NSDirectoryEnumerator *directoryEnumerator = [fileManager enumeratorAtURL:URL
                                                    includingPropertiesForKeys:[NSArray arrayWithObjects:NSURLNameKey,
@@ -117,7 +129,7 @@ NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The
     }
     [arrayOfDuplicateFiles addObjectsFromArray:[dictionaryOfDuplicateFilesAndLocations allKeys]];
 
-    
+    return 1; //Success
 }
 
 @end

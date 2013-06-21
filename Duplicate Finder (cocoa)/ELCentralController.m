@@ -58,9 +58,12 @@ NSMutableArray *arrayOfLocationsForSelected;
 {
     // Make and call the dictionary object
     duplicateFiles = [[ELDuplicateFiles alloc] init];
-    [duplicateFiles generateDuplicatesFromURL:(id)self.selectedURL
+    int status = [duplicateFiles generateDuplicatesFromURL:(id)self.selectedURL
                                   ignoringTheFiles:(id)self.arrayOfFilesToIgnore];
 
+    // Check result status: if failure, return
+    if (status == 0) return;
+    
     // Calls to display output window
     outputWindowController = [[NSWindowController alloc] initWithWindowNibName: @"outputWindow"]; // Create window controller, loaded with xib name. 
     
