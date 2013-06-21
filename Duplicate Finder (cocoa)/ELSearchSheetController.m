@@ -16,7 +16,6 @@
 {
     self = [super initWithWindow:awindow];
     if (self) {
-        // Initialization code here.
     }
     
     return self;

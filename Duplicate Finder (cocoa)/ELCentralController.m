@@ -4,7 +4,6 @@
 //  Created by E L on 6/17/13.
 //  Copyright (c) 2013 n/a. All rights reserved.
 //
-// TODO: Fix ignore list
 // TODO: Disable button if there is no specified path.
 // TODO: Show progress bar window while processing.
 // TODO: Make binding for folder URL box two-way
@@ -110,10 +109,14 @@ NSTableView *_rightTableCentralReference;
 {
     [self closeSearchSheet:nil];
     
+    NSLog(@"%@", arrayOfFilesToIgnore);
+
+    
     // Make and call the dictionary object
     duplicateFiles = [[ELDuplicateFiles alloc] init];
     int status = [duplicateFiles generateDuplicatesFromURL:(id)self.selectedURL
                                           ignoringTheFiles:(id)self.arrayOfFilesToIgnore];
+    
     
     // Check result status: if failure, return
     if (status == 0) return;
