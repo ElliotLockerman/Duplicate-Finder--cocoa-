@@ -41,22 +41,22 @@
 /* Begin PBXFileReference section */
 		6519AB7A17739937001C56AD /* ELSearchSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELSearchSheetController.h; sourceTree = "<group>"; };
 		6519AB7B17739937001C56AD /* ELSearchSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELSearchSheetController.m; sourceTree = "<group>"; };
-		652C3DA7176E95F300C6B40D /* Duplicate Finder (cocoa).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Duplicate Finder (cocoa).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		652C3DA7176E95F300C6B40D /* Duplicate Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Duplicate Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		652C3DAA176E95F300C6B40D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		652C3DAD176E95F300C6B40D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		652C3DAE176E95F300C6B40D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		652C3DAF176E95F300C6B40D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		652C3DB2176E95F300C6B40D /* Duplicate Finder (cocoa)-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Duplicate Finder (cocoa)-Info.plist"; sourceTree = "<group>"; };
+		652C3DB2176E95F300C6B40D /* Duplicate Finder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Duplicate Finder-Info.plist"; sourceTree = "<group>"; };
 		652C3DB4176E95F300C6B40D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		652C3DB6176E95F300C6B40D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		652C3DB8176E95F300C6B40D /* Duplicate Finder (cocoa)-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Duplicate Finder (cocoa)-Prefix.pch"; sourceTree = "<group>"; };
+		652C3DB8176E95F300C6B40D /* Duplicate Finder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Duplicate Finder-Prefix.pch"; sourceTree = "<group>"; };
 		652C3DBA176E95F300C6B40D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		652C3DBC176E95F300C6B40D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		652C3DBD176E95F300C6B40D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		652C3DC0176E95F300C6B40D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		652C3DC7176E95F300C6B40D /* Duplicate Finder (cocoa)Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Duplicate Finder (cocoa)Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		652C3DC7176E95F300C6B40D /* Duplicate FinderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Duplicate FinderTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		652C3DC8176E95F300C6B40D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		652C3DCF176E95F300C6B40D /* Duplicate Finder (cocoa)Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Duplicate Finder (cocoa)Tests-Info.plist"; sourceTree = "<group>"; };
+		652C3DCF176E95F300C6B40D /* Duplicate FinderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Duplicate FinderTests-Info.plist"; sourceTree = "<group>"; };
 		652C3DD1176E95F300C6B40D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		652C3DD3176E95F300C6B40D /* Duplicate_Finder__cocoa_Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Duplicate_Finder__cocoa_Tests.h; sourceTree = "<group>"; };
 		652C3DD4176E95F300C6B40D /* Duplicate_Finder__cocoa_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Duplicate_Finder__cocoa_Tests.m; sourceTree = "<group>"; };
@@ -111,8 +111,8 @@
 		652C3DA8176E95F300C6B40D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				652C3DA7176E95F300C6B40D /* Duplicate Finder (cocoa).app */,
-				652C3DC7176E95F300C6B40D /* Duplicate Finder (cocoa)Tests.octest */,
+				652C3DA7176E95F300C6B40D /* Duplicate Finder.app */,
+				652C3DC7176E95F300C6B40D /* Duplicate FinderTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,10 +163,10 @@
 		652C3DB1176E95F300C6B40D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				652C3DB2176E95F300C6B40D /* Duplicate Finder (cocoa)-Info.plist */,
+				652C3DB2176E95F300C6B40D /* Duplicate Finder-Info.plist */,
 				652C3DB3176E95F300C6B40D /* InfoPlist.strings */,
 				652C3DB6176E95F300C6B40D /* main.m */,
-				652C3DB8176E95F300C6B40D /* Duplicate Finder (cocoa)-Prefix.pch */,
+				652C3DB8176E95F300C6B40D /* Duplicate Finder-Prefix.pch */,
 				652C3DB9176E95F300C6B40D /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -185,7 +185,7 @@
 		652C3DCE176E95F300C6B40D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				652C3DCF176E95F300C6B40D /* Duplicate Finder (cocoa)Tests-Info.plist */,
+				652C3DCF176E95F300C6B40D /* Duplicate FinderTests-Info.plist */,
 				652C3DD0176E95F300C6B40D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -194,9 +194,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		652C3DA6176E95F300C6B40D /* Duplicate Finder (cocoa) */ = {
+		652C3DA6176E95F300C6B40D /* Duplicate Finder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 652C3DD8176E95F300C6B40D /* Build configuration list for PBXNativeTarget "Duplicate Finder (cocoa)" */;
+			buildConfigurationList = 652C3DD8176E95F300C6B40D /* Build configuration list for PBXNativeTarget "Duplicate Finder" */;
 			buildPhases = (
 				652C3DA3176E95F300C6B40D /* Sources */,
 				652C3DA4176E95F300C6B40D /* Frameworks */,
@@ -206,14 +206,14 @@
 			);
 			dependencies = (
 			);
-			name = "Duplicate Finder (cocoa)";
+			name = "Duplicate Finder";
 			productName = "Duplicate Finder (cocoa)";
-			productReference = 652C3DA7176E95F300C6B40D /* Duplicate Finder (cocoa).app */;
+			productReference = 652C3DA7176E95F300C6B40D /* Duplicate Finder.app */;
 			productType = "com.apple.product-type.application";
 		};
-		652C3DC6176E95F300C6B40D /* Duplicate Finder (cocoa)Tests */ = {
+		652C3DC6176E95F300C6B40D /* Duplicate FinderTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 652C3DDB176E95F300C6B40D /* Build configuration list for PBXNativeTarget "Duplicate Finder (cocoa)Tests" */;
+			buildConfigurationList = 652C3DDB176E95F300C6B40D /* Build configuration list for PBXNativeTarget "Duplicate FinderTests" */;
 			buildPhases = (
 				652C3DC2176E95F300C6B40D /* Sources */,
 				652C3DC3176E95F300C6B40D /* Frameworks */,
@@ -225,9 +225,9 @@
 			dependencies = (
 				652C3DCC176E95F300C6B40D /* PBXTargetDependency */,
 			);
-			name = "Duplicate Finder (cocoa)Tests";
+			name = "Duplicate FinderTests";
 			productName = "Duplicate Finder (cocoa)Tests";
-			productReference = 652C3DC7176E95F300C6B40D /* Duplicate Finder (cocoa)Tests.octest */;
+			productReference = 652C3DC7176E95F300C6B40D /* Duplicate FinderTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -239,7 +239,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = n/a;
 			};
-			buildConfigurationList = 652C3DA2176E95F300C6B40D /* Build configuration list for PBXProject "Duplicate Finder (cocoa)" */;
+			buildConfigurationList = 652C3DA2176E95F300C6B40D /* Build configuration list for PBXProject "Duplicate Finder" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -251,8 +251,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				652C3DA6176E95F300C6B40D /* Duplicate Finder (cocoa) */,
-				652C3DC6176E95F300C6B40D /* Duplicate Finder (cocoa)Tests */,
+				652C3DA6176E95F300C6B40D /* Duplicate Finder */,
+				652C3DC6176E95F300C6B40D /* Duplicate FinderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -325,7 +325,7 @@
 /* Begin PBXTargetDependency section */
 		652C3DCC176E95F300C6B40D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 652C3DA6176E95F300C6B40D /* Duplicate Finder (cocoa) */;
+			target = 652C3DA6176E95F300C6B40D /* Duplicate Finder */;
 			targetProxy = 652C3DCB176E95F300C6B40D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -430,9 +430,9 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Duplicate Finder (cocoa)/Duplicate Finder (cocoa)-Prefix.pch";
-				INFOPLIST_FILE = "Duplicate Finder (cocoa)/Duplicate Finder (cocoa)-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Duplicate Finder (cocoa)/Duplicate Finder-Prefix.pch";
+				INFOPLIST_FILE = "Duplicate Finder (cocoa)/Duplicate Finder-Info.plist";
+				PRODUCT_NAME = "Duplicate Finder";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -442,9 +442,9 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Duplicate Finder (cocoa)/Duplicate Finder (cocoa)-Prefix.pch";
-				INFOPLIST_FILE = "Duplicate Finder (cocoa)/Duplicate Finder (cocoa)-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Duplicate Finder (cocoa)/Duplicate Finder-Prefix.pch";
+				INFOPLIST_FILE = "Duplicate Finder (cocoa)/Duplicate Finder-Info.plist";
+				PRODUCT_NAME = "Duplicate Finder";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -457,8 +457,8 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Duplicate Finder (cocoa)/Duplicate Finder (cocoa)-Prefix.pch";
-				INFOPLIST_FILE = "Duplicate Finder (cocoa)Tests/Duplicate Finder (cocoa)Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Duplicate Finder (cocoa)Tests/Duplicate FinderTests-Info.plist";
+				PRODUCT_NAME = "Duplicate FinderTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -472,8 +472,8 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Duplicate Finder (cocoa)/Duplicate Finder (cocoa)-Prefix.pch";
-				INFOPLIST_FILE = "Duplicate Finder (cocoa)Tests/Duplicate Finder (cocoa)Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Duplicate Finder (cocoa)Tests/Duplicate FinderTests-Info.plist";
+				PRODUCT_NAME = "Duplicate FinderTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -482,7 +482,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		652C3DA2176E95F300C6B40D /* Build configuration list for PBXProject "Duplicate Finder (cocoa)" */ = {
+		652C3DA2176E95F300C6B40D /* Build configuration list for PBXProject "Duplicate Finder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				652C3DD6176E95F300C6B40D /* Debug */,
@@ -491,7 +491,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		652C3DD8176E95F300C6B40D /* Build configuration list for PBXNativeTarget "Duplicate Finder (cocoa)" */ = {
+		652C3DD8176E95F300C6B40D /* Build configuration list for PBXNativeTarget "Duplicate Finder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				652C3DD9176E95F300C6B40D /* Debug */,
@@ -500,7 +500,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		652C3DDB176E95F300C6B40D /* Build configuration list for PBXNativeTarget "Duplicate Finder (cocoa)Tests" */ = {
+		652C3DDB176E95F300C6B40D /* Build configuration list for PBXNativeTarget "Duplicate FinderTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				652C3DDC176E95F300C6B40D /* Debug */,
