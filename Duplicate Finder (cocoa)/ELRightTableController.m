@@ -38,7 +38,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
     NSTextField *result/*.stringValue*/ = [arrayForRightTable objectAtIndex:row];
 
-
+    NSLog(@"%@", result);
     
     return result;
 }

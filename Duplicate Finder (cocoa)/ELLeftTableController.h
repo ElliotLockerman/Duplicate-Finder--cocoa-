@@ -17,8 +17,7 @@
 
 -(id)initWithInput:(NSArray*)input;
 
-
-
+-(void)outletTest;
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tabelView;
 

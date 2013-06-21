@@ -22,16 +22,26 @@ ELLeftTableController *leftTableController;
 ELRightTableController *rightTableController;
 NSMutableArray *arrayOfLocationsForSelected;
 
+NSTableView *_leftTableCentralReference;
+NSTableView *_rightTableCentralReference;
+
 @synthesize selectedURL;
 @synthesize arrayOfFilesToIgnore;
 @synthesize outputWindowController;
 
 
 
+
 -(IBAction)newSearch:(id)sender
 {
-    searchSheetController = [[ELSearchSheetController alloc] initWithWindowNibName:@"SearchSheet"];
+    // For some reason, the value of the outlets is null when called by certain fuctions, (including init) 
+    _leftTableCentralReference = leftTableCentralReference;
+    _rightTableCentralReference = rightTableCentralReference;
+
     
+    
+    searchSheetController = [[ELSearchSheetController alloc] initWithWindowNibName:@"SearchSheet"];
+
     
     //[NSBundle loadNibNamed:@"SearchSheet" owner:self];
     
@@ -43,19 +53,21 @@ NSMutableArray *arrayOfLocationsForSelected;
         modalDelegate:self
        didEndSelector:@selector(didEndSheet:returnCode:contextInfo:)
           contextInfo:nil];
-     
+
+    
 }
 
 - (IBAction)closeSearchSheet:(id)sender
 {
+
     assert(searchSheetReference);
-    NSLog(@"%@", searchSheetReference);
     [NSApp endSheet:searchSheetReference];
 }
 
 
 - (void)didEndSheet:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
 {
+
     [sheet orderOut:self];
 }
 
@@ -65,7 +77,7 @@ NSMutableArray *arrayOfLocationsForSelected;
 // For the "Select Folder" button. 
 - (IBAction)openExistingDocument:(id)sender
 {
-        
+
     NSOpenPanel* panel = [NSOpenPanel openPanel];
     
     //Disable file selection
@@ -107,9 +119,10 @@ NSMutableArray *arrayOfLocationsForSelected;
     arrayOfLocationsForSelected = [[NSMutableArray alloc] init];
     [arrayOfLocationsForSelected addObjectsFromArray:[[[duplicateFiles dictionaryOfDuplicateFilesAndLocations] valueForKey:[[duplicateFiles arrayOfDuplicateFiles] objectAtIndex:0]] componentsSeparatedByString:@","]]; // Add objects from array produced by: Get the dictionary from duplicatefiles. Get the object for the first key (the defaut). Split the values by a comma, producing an array.
     rightTableController = [[ELRightTableController alloc] initWithInput:arrayOfLocationsForSelected]; // Create the right table controller give it default input 
-
-    [leftTableCentralReference reloadData]; // Redraw the right column
-    [rightTableCentralReference reloadData]; // Redraw the right column
+    
+    
+    [_leftTableCentralReference reloadData]; // Redraw the right column
+    [_rightTableCentralReference reloadData]; // Redraw the right column
 
 
 
@@ -118,23 +131,28 @@ NSMutableArray *arrayOfLocationsForSelected;
 // For clicking on the left column
 - (IBAction)updateRightColumnWhenLeftIsChanged:(id)sender
 {
-    
+    if ([_leftTableCentralReference selectedRow] <= [[duplicateFiles arrayOfDuplicateFiles] count])
+    {
     [arrayOfLocationsForSelected removeAllObjects];
-    [arrayOfLocationsForSelected addObjectsFromArray:[[[duplicateFiles dictionaryOfDuplicateFilesAndLocations] valueForKey:[[duplicateFiles arrayOfDuplicateFiles] objectAtIndex:[leftTableCentralReference selectedRow]]] componentsSeparatedByString:@","]]; // Create an array of locations were the currently selected file is. Do ths by: Get the dictionary from duplicatefiles. Get the object stored at they key of the curren selection, found by getting the object in array of duplicafiles at the index of the current row.
+    [arrayOfLocationsForSelected addObjectsFromArray:[[[duplicateFiles dictionaryOfDuplicateFilesAndLocations] valueForKey:[[duplicateFiles arrayOfDuplicateFiles] objectAtIndex:[_leftTableCentralReference selectedRow]]] componentsSeparatedByString:@","]]; // Create an array of locations were the currently selected file is. Do ths by: Get the dictionary from duplicatefiles. Get the object stored at they key of the curren selection, found by getting the object in array of duplicafiles at the index of the current row.
     
     
     [rightTableController setArrayForRightTable:arrayOfLocationsForSelected]; //Feed the array of locations to the right column. 
-    [rightTableCentralReference reloadData]; // Redraw the right column 
+    [_rightTableCentralReference reloadData]; // Redraw the right column
+    }
 }
 
 
 - (IBAction)showInFinderWhenRightColumnIsClicked:(id)sender
 {
-    if ([rightTableCentralReference selectedRow] <= [arrayOfLocationsForSelected count])
+    if ([_rightTableCentralReference selectedRow] <= [arrayOfLocationsForSelected count])
     {
-        NSURL *currentURL = [[NSURL alloc] initWithString:[arrayOfLocationsForSelected objectAtIndex:[rightTableCentralReference selectedRow]]];
+        NSURL *currentURL = [[NSURL alloc] initWithString:[arrayOfLocationsForSelected objectAtIndex:[_rightTableCentralReference selectedRow]]];
         NSArray *currentURLInArray = [[NSArray alloc] initWithObjects:currentURL,nil];
         [[NSWorkspace sharedWorkspace] activateFileViewerSelectingURLs:currentURLInArray];
     }
 }
+
+
+
 @end

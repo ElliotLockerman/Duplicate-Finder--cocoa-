@@ -25,6 +25,12 @@ NSArray *arrayForLeftTable;
 }
 
 
+-(void)outletTest
+{
+    NSLog(@"%@", leftTableReference);
+}
+
+
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
 {
     return [arrayForLeftTable count];

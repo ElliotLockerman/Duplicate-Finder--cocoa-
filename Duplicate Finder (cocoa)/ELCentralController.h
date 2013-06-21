@@ -16,8 +16,9 @@
     
     IBOutlet NSWindow *searchSheetReference;
     
-    IBOutlet NSTableView *rightTableCentralReference;
     IBOutlet NSTableView *leftTableCentralReference;
+    IBOutlet NSTableView *rightTableCentralReference;
+
     
     ELSearchSheetController *searchSheetController;
 
@@ -26,7 +27,6 @@
 @property NSMutableString *selectedURL; //The URL the user has selected or entered in the textfield
 @property NSMutableArray *arrayOfFilesToIgnore; // From tokenizer
 @property (strong) NSWindowController *outputWindowController;
-
 
 
 -(IBAction)newSearch:(id)sender;
@@ -45,6 +45,7 @@
 - (IBAction)updateRightColumnWhenLeftIsChanged:(id)sender;
 
 - (IBAction)showInFinderWhenRightColumnIsClicked:(id)sender;
+
 
 
 @end
