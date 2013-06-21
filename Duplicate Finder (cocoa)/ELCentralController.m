@@ -109,7 +109,7 @@ NSTableView *_rightTableCentralReference;
 {
     [self closeSearchSheet:nil];
     
-    NSLog(@"%@", arrayOfFilesToIgnore);
+    NSLog(@"%@", selectedURL);
 
     
     // Make and call the dictionary object
