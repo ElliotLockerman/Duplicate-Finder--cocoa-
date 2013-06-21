@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "652C3DA6176E95F300C6B40D"
                BuildableName = "Duplicate Finder (cocoa).app"
-               BlueprintName = "Duplicate Finder (cocoa)"
-               ReferencedContainer = "container:Duplicate Finder (cocoa).xcodeproj">
+               BlueprintName = "Duplicate Finder"
+               ReferencedContainer = "container:Duplicate Finder.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "652C3DC6176E95F300C6B40D"
                BuildableName = "Duplicate Finder (cocoa)Tests.octest"
-               BlueprintName = "Duplicate Finder (cocoa)Tests"
-               ReferencedContainer = "container:Duplicate Finder (cocoa).xcodeproj">
+               BlueprintName = "Duplicate FinderTests"
+               ReferencedContainer = "container:Duplicate Finder.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "652C3DA6176E95F300C6B40D"
             BuildableName = "Duplicate Finder (cocoa).app"
-            BlueprintName = "Duplicate Finder (cocoa)"
-            ReferencedContainer = "container:Duplicate Finder (cocoa).xcodeproj">
+            BlueprintName = "Duplicate Finder"
+            ReferencedContainer = "container:Duplicate Finder.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "652C3DA6176E95F300C6B40D"
             BuildableName = "Duplicate Finder (cocoa).app"
-            BlueprintName = "Duplicate Finder (cocoa)"
-            ReferencedContainer = "container:Duplicate Finder (cocoa).xcodeproj">
+            BlueprintName = "Duplicate Finder"
+            ReferencedContainer = "container:Duplicate Finder.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "652C3DA6176E95F300C6B40D"
             BuildableName = "Duplicate Finder (cocoa).app"
-            BlueprintName = "Duplicate Finder (cocoa)"
-            ReferencedContainer = "container:Duplicate Finder (cocoa).xcodeproj">
+            BlueprintName = "Duplicate Finder"
+            ReferencedContainer = "container:Duplicate Finder.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
