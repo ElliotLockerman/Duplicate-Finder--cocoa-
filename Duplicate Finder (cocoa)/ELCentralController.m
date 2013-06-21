@@ -112,9 +112,11 @@ NSTableView *_rightTableCentralReference;
     
     // Make and call the dictionary object
     duplicateFiles = [[ELDuplicateFiles alloc] init];
-    [duplicateFiles generateDuplicatesFromURL:(id)self.selectedURL
-                                  ignoringTheFiles:(id)self.arrayOfFilesToIgnore];
-
+    int status = [duplicateFiles generateDuplicatesFromURL:(id)self.selectedURL
+                                          ignoringTheFiles:(id)self.arrayOfFilesToIgnore];
+    
+    // Check result status: if failure, return
+    if (status == 0) return;
 
     leftTableController = [[ELLeftTableController alloc] initWithInput:[duplicateFiles arrayOfDuplicateFiles]]; // Create left table controller, and pass it the array of filenames.
     
