@@ -5,8 +5,12 @@
 //  Copyright (c) 2013 n/a. All rights reserved.
 //
 // TODO: Disable button if there is no specified path. 
-// TODO: Check if path is valid; show alert and end if not.
+// TODO: Check if path is valid; show alert and end if not. (Completed in branch:master)
 // TODO: Show progress bar window while processing. 
+// TODO: Make binding for folder URL box two-way
+//  SUBTODO: Check type to use can enter URL or Path, relative or absolute.
+// TODO: Make ignore list regex
+
 
 
 #import "ELCentralController.h"
