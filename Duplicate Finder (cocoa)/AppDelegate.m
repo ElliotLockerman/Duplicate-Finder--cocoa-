@@ -17,7 +17,11 @@
 {
     // Insert code here to initialize your application
     centralController = [[ELCentralController alloc] init];
-
+    
+    
 }
+
+
+
 
 @end

@@ -35,7 +35,6 @@ NSTableView *_rightTableCentralReference;
 
 
 
-
 -(IBAction)newSearch:(id)sender
 {
     // For some reason, the value of the outlets is null when called by certain fuctions, (including init) 
@@ -149,7 +148,7 @@ NSTableView *_rightTableCentralReference;
 
 - (IBAction)showInFinderWhenRightColumnIsClicked:(id)sender
 {
-    if ([_rightTableCentralReference selectedRow] <= [arrayOfLocationsForSelected count])
+    if ([_rightTableCentralReference selectedRow] <= [arrayOfLocationsForSelected count] && arrayOfLocationsForSelected != NULL)
     {
         NSURL *currentURL = [[NSURL alloc] initWithString:[arrayOfLocationsForSelected objectAtIndex:[_rightTableCentralReference selectedRow]]];
         NSArray *currentURLInArray = [[NSArray alloc] initWithObjects:currentURL,nil];

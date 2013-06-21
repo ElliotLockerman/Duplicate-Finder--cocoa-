@@ -14,4 +14,7 @@
 //@property (assign) IBOutlet NSWindow *window;
 @property ELCentralController *centralController;
 
+-(void)awakeFromNib;
+
+
 @end

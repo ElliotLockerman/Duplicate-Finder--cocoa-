@@ -24,6 +24,7 @@
 
 }
 
+
 @property NSMutableString *selectedURL; //The URL the user has selected or entered in the textfield
 @property NSMutableArray *arrayOfFilesToIgnore; // From tokenizer
 @property (strong) NSWindowController *outputWindowController;
