@@ -14,6 +14,7 @@
 
 }
 
+-(IBAction)test:(id)sender;
 
 -(id)initWithInput:(NSArray*)input;
 

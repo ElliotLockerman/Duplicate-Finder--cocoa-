@@ -24,6 +24,11 @@ NSArray *arrayForLeftTable;
     return self;
 }
 
+-(void)test:(id)sender
+{
+    NSLog(@"%@", leftTableReference);
+}
+
 
 -(void)outletTest
 {

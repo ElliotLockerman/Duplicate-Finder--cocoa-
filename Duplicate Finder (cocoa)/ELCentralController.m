@@ -10,7 +10,7 @@
 // TODO: Make binding for folder URL box two-way
 //  SUBTODO: Check type to use can enter URL or Path, relative or absolute.
 // TODO: Make ignore list regex
-
+// TODO: Complete Menu
 
 
 #import "ELCentralController.h"
@@ -127,7 +127,7 @@ NSTableView *_rightTableCentralReference;
     
     [_leftTableCentralReference reloadData]; // Redraw the right column
     [_rightTableCentralReference reloadData]; // Redraw the right column
-
+    
 
 
 }
