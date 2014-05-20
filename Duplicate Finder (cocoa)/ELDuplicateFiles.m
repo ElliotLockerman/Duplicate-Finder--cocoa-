@@ -128,6 +128,18 @@ NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The
         
     }
     [arrayOfDuplicateFiles addObjectsFromArray:[dictionaryOfDuplicateFilesAndLocations allKeys]];
+    
+    if ([arrayOfDuplicateFiles count] == 0)
+    {
+        NSAlert* msgBox = [[NSAlert alloc] init];
+        [msgBox setMessageText: @"There were no duplicate files!"];
+        [msgBox addButtonWithTitle: @"OK"];
+        [msgBox runModal];
+        return 0; //Failure
+    }
+    
+    
+    
     NSLog(@"Done!");
     return 1;
 }
