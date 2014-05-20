@@ -14,11 +14,11 @@
 
 }
 
+-(IBAction)test:(id)sender;
 
 -(id)initWithInput:(NSArray*)input;
 
-
-
+-(void)outletTest;
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tabelView;
 

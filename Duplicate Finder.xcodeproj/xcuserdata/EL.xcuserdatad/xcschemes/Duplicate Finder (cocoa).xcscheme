@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "652C3DA6176E95F300C6B40D"
-               BuildableName = "Duplicate Finder (cocoa).app"
+               BuildableName = "Duplicate Finder.app"
                BlueprintName = "Duplicate Finder"
                ReferencedContainer = "container:Duplicate Finder.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "652C3DC6176E95F300C6B40D"
-               BuildableName = "Duplicate Finder (cocoa)Tests.octest"
+               BuildableName = "Duplicate FinderTests.octest"
                BlueprintName = "Duplicate FinderTests"
                ReferencedContainer = "container:Duplicate Finder.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "652C3DA6176E95F300C6B40D"
-            BuildableName = "Duplicate Finder (cocoa).app"
+            BuildableName = "Duplicate Finder.app"
             BlueprintName = "Duplicate Finder"
             ReferencedContainer = "container:Duplicate Finder.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "652C3DA6176E95F300C6B40D"
-            BuildableName = "Duplicate Finder (cocoa).app"
+            BuildableName = "Duplicate Finder.app"
             BlueprintName = "Duplicate Finder"
             ReferencedContainer = "container:Duplicate Finder.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "652C3DA6176E95F300C6B40D"
-            BuildableName = "Duplicate Finder (cocoa).app"
+            BuildableName = "Duplicate Finder.app"
             BlueprintName = "Duplicate Finder"
             ReferencedContainer = "container:Duplicate Finder.xcodeproj">
          </BuildableReference>

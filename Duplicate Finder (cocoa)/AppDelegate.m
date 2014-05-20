@@ -17,6 +17,14 @@
 {
     // Insert code here to initialize your application
     centralController = [[ELCentralController alloc] init];
+    
+    
 }
+
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication
+{
+    return YES;
+}
+
 
 @end

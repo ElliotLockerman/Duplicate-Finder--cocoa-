@@ -14,4 +14,8 @@
 //@property (assign) IBOutlet NSWindow *window;
 @property ELCentralController *centralController;
 
+-(void)awakeFromNib;
+
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication;
+
 @end

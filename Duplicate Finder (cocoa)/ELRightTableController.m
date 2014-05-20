@@ -20,7 +20,6 @@ NSMutableArray *arrayForRightTable;
     else if (self)
     {
         arrayForRightTable = [[NSMutableArray alloc] initWithArray:input];
-        
     }
     return self;
 }
@@ -38,7 +37,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
 
     NSTextField *result/*.stringValue*/ = [arrayForRightTable objectAtIndex:row];
 
-
+    NSLog(@"Result for right table was: %@", result);
     
     return result;
 }

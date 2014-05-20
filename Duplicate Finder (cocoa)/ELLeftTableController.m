@@ -20,9 +20,19 @@ NSArray *arrayForLeftTable;
     else if (self)
     {
         arrayForLeftTable = [[NSArray alloc] initWithArray:input];
-
     }
     return self;
+}
+
+-(void)test:(id)sender
+{
+    NSLog(@"%@", leftTableReference);
+}
+
+
+-(void)outletTest
+{
+    NSLog(@"%@", leftTableReference);
 }
 
 
@@ -42,7 +52,7 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
     //NSTextField *result = [self.tableView makeViewWithIdentifier:@"leftColumn" owner:self]; //Everyone had this, but i dont seem to need it.
 
     NSTextField *result/*.stringValue*/ = [arrayForLeftTable objectAtIndex:row];
-    
+    NSLog(@"%@", result);
     return result;
 }
 
