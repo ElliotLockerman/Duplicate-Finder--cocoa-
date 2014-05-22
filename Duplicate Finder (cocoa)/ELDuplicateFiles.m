@@ -50,13 +50,10 @@ NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The
     // Check that directory actually exists. If not, open alert and break.
     BOOL isDirectory;
     BOOL exists = [fileManager fileExistsAtPath:[URL path] isDirectory:&isDirectory];
+    
     if (!exists || !isDirectory)
     {
-        NSAlert* msgBox = [[NSAlert alloc] init];
-        [msgBox setMessageText: @"The folder your specified does not exist. Please try again."];
-        [msgBox addButtonWithTitle: @"OK"];
-        [msgBox runModal];
-        return 0; //Failure
+        return -1; //Selection does not exist or is not a directory
     }
     
     NSLog(@"%@", URL);
@@ -131,11 +128,7 @@ NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The
     
     if ([arrayOfDuplicateFiles count] == 0)
     {
-        NSAlert* msgBox = [[NSAlert alloc] init];
-        [msgBox setMessageText: @"There were no duplicate files!"];
-        [msgBox addButtonWithTitle: @"OK"];
-        [msgBox runModal];
-        return 0; //Failure
+        return 2; //Sucess, no files found
     }
     
     

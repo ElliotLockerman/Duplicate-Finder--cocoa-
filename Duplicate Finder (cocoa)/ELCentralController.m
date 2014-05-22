@@ -109,7 +109,7 @@ NSTableView *_rightTableCentralReference;
 {
     [self closeSearchSheet:nil];
     
-    NSLog(@"%@", selectedURL);
+    NSLog(@"The selected URL is: %@", selectedURL);
 
     
     // Make and call the dictionary object
@@ -118,9 +118,27 @@ NSTableView *_rightTableCentralReference;
                                           ignoringTheFiles:(id)self.arrayOfFilesToIgnore];
     
     
-    // Check result status: if failure, return
-    if (status == 0) return;
+    // Check result status, and if needed, warn the user and return
+    NSLog(@"The status is: %d", status);
+    if (status == -1)//Selection does not exist or is not a directory
+    {
+        NSAlert* msgBox = [[NSAlert alloc] init];
+        [msgBox setMessageText: @"The folder your specified does not exist. Please try again."];
+        [msgBox addButtonWithTitle: @"OK"];
+        [msgBox runModal];
+        return;
+    }
 
+    if (status == 2)//Sucess, no files found
+    {
+        NSAlert* msgBox = [[NSAlert alloc] init];
+        [msgBox setMessageText: @"There were no duplicate files!"];
+        [msgBox addButtonWithTitle: @"OK"];
+        [msgBox runModal];
+        return;
+    }
+    
+    
     leftTableController = [[ELLeftTableController alloc] initWithInput:[duplicateFiles arrayOfDuplicateFiles]]; // Create left table controller, and pass it the array of filenames.
     
     // Draw right table with as if left default (index 0) was selected
