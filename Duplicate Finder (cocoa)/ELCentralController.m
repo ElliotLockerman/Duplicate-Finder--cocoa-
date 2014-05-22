@@ -143,7 +143,7 @@ NSTableView *_rightTableCentralReference;
     
     // Draw right table with as if left default (index 0) was selected
     arrayOfLocationsForSelected = [[NSMutableArray alloc] init];
-    [arrayOfLocationsForSelected addObjectsFromArray:[[[duplicateFiles dictionaryOfDuplicateFilesAndLocations] valueForKey:[[duplicateFiles arrayOfDuplicateFiles] objectAtIndex:0]] componentsSeparatedByString:@","]]; // Add objects from array produced by: Get the dictionary from duplicatefiles. Get the object for the first key (the defaut). Split the values by a comma, producing an array.
+    [arrayOfLocationsForSelected addObjectsFromArray:[[duplicateFiles dictionaryOfDuplicateFilesAndLocations] valueForKey:[[duplicateFiles arrayOfDuplicateFiles] objectAtIndex:0]]]; // Add objects from array produced by: Get the dictionary from duplicatefiles. Get the object for the first key (the defaut).
     rightTableController = [[ELRightTableController alloc] initWithInput:arrayOfLocationsForSelected]; // Create the right table controller give it default input 
     
     
@@ -160,7 +160,7 @@ NSTableView *_rightTableCentralReference;
     if ([_leftTableCentralReference selectedRow] <= [[duplicateFiles arrayOfDuplicateFiles] count])
     {
     [arrayOfLocationsForSelected removeAllObjects];
-    [arrayOfLocationsForSelected addObjectsFromArray:[[[duplicateFiles dictionaryOfDuplicateFilesAndLocations] valueForKey:[[duplicateFiles arrayOfDuplicateFiles] objectAtIndex:[_leftTableCentralReference selectedRow]]] componentsSeparatedByString:@","]]; // Create an array of locations were the currently selected file is. Do ths by: Get the dictionary from duplicatefiles. Get the object stored at they key of the curren selection, found by getting the object in array of duplicafiles at the index of the current row.
+    [arrayOfLocationsForSelected addObjectsFromArray:[[duplicateFiles dictionaryOfDuplicateFilesAndLocations] valueForKey:[[duplicateFiles arrayOfDuplicateFiles] objectAtIndex:[_leftTableCentralReference selectedRow]]]]; // Create an array of locations were the currently selected file is. Do ths by: Get the dictionary from duplicatefiles. Get the object stored at they key of the curren selection, found by getting the object in array of duplicafiles at the index of the current row.
     
     
     [rightTableController setArrayForRightTable:arrayOfLocationsForSelected]; //Feed the array of locations to the right column. 

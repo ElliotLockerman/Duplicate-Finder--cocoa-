@@ -100,21 +100,19 @@ NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The
                 if ([dictionaryOfDuplicateFilesAndLocations objectForKey:currentFileBasename] == nil) // If its not already in the duplicate dictionary
                 {
                     // Add the key and BOTH paths
-                    NSMutableString *bothURLs = [[NSMutableString alloc] init];
-                    bothURLs = directoryOfCurrentFile;
-                    [bothURLs appendFormat:@",%@", [allFiles objectForKey:currentFileBasename]];
+
+                    NSMutableArray *URLs = [[NSMutableArray alloc] init];
                     
-                    [dictionaryOfDuplicateFilesAndLocations setObject:bothURLs forKey:currentFileBasename];
+                    [URLs addObject:directoryOfCurrentFile];
+                    [URLs addObject:currentFileBasename];
+                    
+                    [dictionaryOfDuplicateFilesAndLocations setObject:URLs forKey:currentFileBasename];
                     
                 }
                 else // If its already in the duplciate dictionary
                 {
-                    //Concatenate current URL to object
-                    NSMutableString *newURL = [[NSMutableString alloc] init];
-                    newURL = [dictionaryOfDuplicateFilesAndLocations objectForKey:currentFileBasename];
-                    [newURL appendFormat:@",%@", directoryOfCurrentFile];
-                    
-                    [dictionaryOfDuplicateFilesAndLocations setObject:newURL forKey:currentFileBasename];
+                    //Add current URL to object
+                    [[dictionaryOfDuplicateFilesAndLocations objectForKey:currentFileBasename] addObject:directoryOfCurrentFile];
                     
                 }
                 
@@ -134,6 +132,9 @@ NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The
     
     
     NSLog(@"Done!");
+        
+    
+    
     return 1;
 }
 
