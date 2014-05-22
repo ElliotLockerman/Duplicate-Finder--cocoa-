@@ -103,8 +103,8 @@ NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The
 
                     NSMutableArray *URLs = [[NSMutableArray alloc] init];
                     
+                    [URLs addObject:[allFiles objectForKey:currentFileBasename]];
                     [URLs addObject:directoryOfCurrentFile];
-                    [URLs addObject:currentFileBasename];
                     
                     [dictionaryOfDuplicateFilesAndLocations setObject:URLs forKey:currentFileBasename];
                     
