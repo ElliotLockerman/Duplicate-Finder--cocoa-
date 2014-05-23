@@ -20,7 +20,7 @@
 
 -(void)outletTest;
 
-- (NSInteger)numberOfRowsInTableView:(NSTableView *)tabelView;
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView;
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row;
 

@@ -16,7 +16,7 @@ NSFileManager *fileManager;
 NSDirectoryEnumerator *directoryEnumerator;
 NSMutableDictionary *allFiles;
 
-NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The keys are filenames of files which exist in more than one location. Values are comma-delimited strings of all URLs where the file is found
+NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The keys are filenames of files which exist in more than one location. Values are an array of locations where the files are found. 
 
 -(id)init
 {

@@ -67,7 +67,9 @@ NSTableView *_rightTableCentralReference;
 }
 
 
-- (void)didEndSheet:(NSWindow *)sheet returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
+- (void)didEndSheet:(NSWindow *)sheet
+         returnCode:(NSInteger)returnCode
+        contextInfo:(void *)contextInfo
 {
 
     [sheet orderOut:self];
