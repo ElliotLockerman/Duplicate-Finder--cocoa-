@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1080" identifier="macosx"/>
+        <deployment defaultVersion="1070" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
     </dependencies>
     <objects>
@@ -314,20 +314,20 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1242">
-                                        <rect key="frame" x="0.0" y="0.0" width="782" height="447"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="789" height="447"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <clipView key="contentView" id="h8a-Yh-k6a">
-                                            <rect key="frame" x="1" y="1" width="780" height="445"/>
+                                            <rect key="frame" x="1" y="1" width="787" height="445"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" id="1243">
-                                                    <rect key="frame" x="0.0" y="0.0" width="780" height="445"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="787" height="445"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
-                                                        <tableColumn editable="NO" width="770" minWidth="40" maxWidth="1000" id="1247">
+                                                        <tableColumn editable="NO" width="784" minWidth="40" maxWidth="1000" id="1247">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -351,11 +351,11 @@
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </clipView>
                                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="1244">
-                                            <rect key="frame" x="1" y="119" width="238" height="15"/>
+                                            <rect key="frame" x="-7" y="-14" width="0.0" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="1246">
-                                            <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                            <rect key="frame" x="-14" y="-7" width="15" height="0.0"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
@@ -364,7 +364,7 @@
                                     <constraint firstItem="1242" firstAttribute="top" secondItem="1103" secondAttribute="top" id="1255"/>
                                     <constraint firstItem="1242" firstAttribute="leading" secondItem="1103" secondAttribute="leading" id="1256"/>
                                     <constraint firstItem="1242" firstAttribute="bottom" secondItem="1103" secondAttribute="bottom" id="1258"/>
-                                    <constraint firstAttribute="trailing" secondItem="1242" secondAttribute="trailing" constant="7" id="1268"/>
+                                    <constraint firstAttribute="trailing" secondItem="1242" secondAttribute="trailing" id="1268"/>
                                 </constraints>
                             </customView>
                         </subviews>
