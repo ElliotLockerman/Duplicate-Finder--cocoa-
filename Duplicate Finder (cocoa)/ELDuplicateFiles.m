@@ -91,9 +91,9 @@ NSMutableDictionary *dictionaryOfDuplicateFilesAndLocations;// A dictionary. The
             {
                 //Do nothing
             }
-            else if([allFiles objectForKey:currentFileBasename] == nil) // If its not a duplicate (at this point)
+            else if([allFiles objectForKey:currentFileBasename] == nil) // If its not in the list of allFiles (and therefor not a duplicate)
             {
-                [allFiles setObject:directoryOfCurrentFile forKey:currentFileBasename];
+                [allFiles setObject:directoryOfCurrentFile forKey:currentFileBasename]; // Put both the basename and the path in the dictionary. If later we find out its a duplicate we'll need it.
             }
             else //If its a duplicate
             {
